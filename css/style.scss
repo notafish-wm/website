@@ -1,0 +1,228 @@
+@font-face {
+  font-family: Lato-regular;
+  src: url(./fonts/Lato-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato-regular;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #39c;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  margin: 0 0 20px;
+}
+
+p {
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+body {
+  padding-top: 9vh;
+
+  @media screen and(max-width:1165px) {
+  }
+
+  // Navbar
+  nav {
+    padding-top: 9vh;
+    width: 530px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-left: 13vw;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    @media screen and(max-width:1165px) {
+      overflow: hidden;
+      height: 120vh;
+      width: 100%;
+      padding-top: 0;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media screen and(max-width:1165px) {
+      position: static;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+
+      .container {
+        width: fit-content;
+
+        img {
+          border-radius: 50%;
+          width: 210px;
+          height: 270px;
+        }
+
+        .status {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          width: 100%;
+          line-height: 1.4;
+          color: #777;
+          font-size: 0.8rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          font-weight: 600;
+        }
+        span {
+          font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+          color: #777;
+          margin-bottom: 20px;
+        }
+        ul {
+          li {
+            margin-bottom: 20px;
+
+            a:hover {
+              background-color: black;
+              color: #ffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Main Section
+  main {
+    float: right;
+    width: 60%;
+    padding-right: 16%;
+
+    @media screen and(max-width:1165px) {
+      float: none;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: circle;
+      color: #777;
+      margin: 20px 20px 20px 40px;
+      font-size: 0.9rem;
+    }
+
+    p > span > a {
+      color: #39c;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      font-style: italic;
+    }
+
+    .title {
+      color: #39c;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .last {
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 20px;
+
+      .special-link {
+        text-decoration: none;
+        font-style: normal;
+        background-color: #f8f8f8;
+        color: #444;
+        font-weight: lighter;
+        border: none;
+        cursor: pointer;
+      }
+
+      .special-link.btn::before {
+        content: "[+]";
+      }
+
+      .special-link.btn.minus::before {
+        content: "[-]";
+      }
+
+      .abs-text {
+        margin-top: 20px;
+        display: none;
+        background-color: #f1f1f1;
+        padding: 10px;
+        color: #777;
+        font-size: 0.9rem;
+        font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      .abs-text.show {
+        display: block;
+      }
+
+      a {
+        text-decoration: underline;
+        font-style: italic;
+        color: rgb(85, 85, 249);
+      }
+    }
+  }
+}
