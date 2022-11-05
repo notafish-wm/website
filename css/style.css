@@ -1,12 +1,20 @@
 @font-face {
-  font-family: Lato-regular;
-  src: url(./fonts/Lato-Regular.ttf);
+  font-family: LatoRegular;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: LatoLight;
+  src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: LatoBold;
+  src: url(../fonts/Lato-Bold.ttf);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Lato-regular;
+  font: 16px/1.4 LatoRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -17,11 +25,6 @@ html {
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
-}
-
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
 }
 
 ul {
@@ -100,9 +103,9 @@ body nav div .container {
   width: -moz-fit-content;
   width: fit-content;
 }
-body nav div .container img {
+body nav div .container .prof-pic {
   border-radius: 50%;
-  width: 210px;
+  width: 200px;
   height: 270px;
 }
 body nav div .container .status {
@@ -111,19 +114,30 @@ body nav div .container .status {
   width: 100%;
   line-height: 1.4;
   color: #777;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-family: LatoLight;
+}
+body nav div .container .univer-logo {
+  width: 150px;
+  margin-bottom: 20px;
 }
 body nav div .container h1 {
+  width: 250px;
   font-size: 2rem;
-  font-weight: 600;
+  font-family: LatoBold;
 }
 body nav div .container span {
-  font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-family: LatoLight;
   color: #777;
   margin-bottom: 20px;
 }
 body nav div .container ul li {
   margin-bottom: 20px;
+}
+body nav div .container ul li a {
+  font-size: 1rem;
+  font-family: LatoLight;
 }
 body nav div .container ul li a:hover {
   background-color: black;
@@ -143,14 +157,22 @@ body main {
 }
 body main h3 {
   font-size: 1.1rem;
-  color: #333;
+  color: #444;
   margin-bottom: 20px;
+  font-family: LatoBold;
 }
 body main ul {
   list-style: circle;
   color: #777;
   margin: 20px 20px 20px 40px;
+}
+body main ul li {
   font-size: 0.9rem;
+  font-family: LatoLight;
+}
+body main ul li a {
+  font-size: 0.9rem;
+  font-family: LatoLight;
 }
 body main p > span > a {
   color: #39c;
@@ -162,7 +184,7 @@ body main p > span > a {
 body main .title {
   color: #39c;
   font-size: 0.9rem;
-  font-weight: bold;
+  font-family: LatoBold;
 }
 body main .last {
   margin-bottom: 20px;
@@ -171,15 +193,17 @@ body main .text {
   font-size: 0.9rem;
   color: #777;
   margin-bottom: 20px;
+  font-family: LatoLight;
 }
 body main .text .special-link {
   text-decoration: none;
   font-style: normal;
   background-color: #f8f8f8;
-  color: #444;
-  font-weight: lighter;
+  color: #111;
   border: none;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-family: LatoLight;
 }
 body main .text .special-link.btn::before {
   content: "[+]";
@@ -194,13 +218,14 @@ body main .text .abs-text {
   padding: 10px;
   color: #777;
   font-size: 0.9rem;
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: LatoLight;
 }
 body main .text .abs-text.show {
   display: block;
 }
 body main .text a {
   text-decoration: underline;
+  font-size: 0.9rem;
   font-style: italic;
   color: rgb(85, 85, 249);
 }/*# sourceMappingURL=style.css.map */
