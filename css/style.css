@@ -180,6 +180,7 @@ body main p > span > a {
   font-size: 0.9rem;
   text-decoration: underline;
   font-style: italic;
+  font-family: LatoBold;
 }
 body main .title {
   color: #39c;
@@ -228,4 +229,5 @@ body main .text a {
   font-size: 0.9rem;
   font-style: italic;
   color: rgb(85, 85, 249);
+  font-family: LatoLight;
 }/*# sourceMappingURL=style.css.map */
