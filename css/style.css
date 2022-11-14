@@ -183,7 +183,8 @@ body main p > span > a {
   font-family: LatoBold;
 }
 body main .title {
-  color: #00008B;
+  color: #39C;
+  <!--- color: #00008B; --->
   font-size: 0.9rem;
   font-family: LatoBold;
 }
