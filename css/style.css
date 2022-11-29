@@ -231,7 +231,7 @@ body main .text .abs-text.show {
   display: block;
 }
 body main .text a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-size: 0.9rem;
   font-style: italic;
   color: rgb(85, 85, 249);   /* Determines color of coauthor names ; */
