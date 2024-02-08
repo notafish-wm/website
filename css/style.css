@@ -166,7 +166,7 @@ body main h3 {
 body main ul {
   list-style: circle;
   color: #777;   /* Determines color of non-link text of "Best paper prize... etc" */
-  margin: 20px 20px 20px 40px;
+  margin: 5px 20px 20px 40px;
 }
 body main ul li {
   font-size: 0.9rem;
@@ -184,6 +184,8 @@ body main p > span > a {
   font-style: italic;
   font-family: LatoBold;
 }
+
+
 body main .title {
   color: #00629B;  /* Main text color */
 /* color: #5f83ff; 
@@ -200,6 +202,8 @@ body main .text {
   color: #777;   /* Determines colors of non-underlined text in coauthor bracket but not coauthor names (with XXX and YYY) */
   margin-bottom: 20px;
   font-family: LatoLight;
+  margin-bottom: 2px; /* Adjusted bottom margin */
+
 }
 body main .journal {
   font-size: 1rem;
