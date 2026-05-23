@@ -1,913 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>William Mullins</title>
-  </head>
-  <body>
-    <!-- Navbar Left Side -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William Mullins</title>
+
+  <!-- SEO -->
+  <meta name="description" content="William Mullins is an Associate Professor of Finance at the Rady School of Management, UC San Diego. Research in behavioral finance, social media, and the political economy of household finance.">
+  <link rel="canonical" href="https://willmullins.net/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="William Mullins">
+  <meta property="og:description" content="Associate Professor of Finance, Rady School, UC San Diego.">
+  <meta property="og:url" content="https://willmullins.net/">
+  <meta property="og:image" content="https://willmullins.net/img/proff.png">
+  <meta property="og:site_name" content="William Mullins">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="William Mullins">
+  <meta name="twitter:description" content="Associate Professor of Finance, Rady School, UC San Diego.">
+  <meta name="twitter:image" content="https://willmullins.net/img/proff.png">
+
+  <!-- Favicon (drop a favicon.ico or favicon.png in your site root) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/proff.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 106.25%; scroll-behavior: smooth; }
+
+    :root {
+      --sidebar-width: 280px;
+      --accent: #1a3a5c;
+      --link: #1a5c8a;
+      --link-hover: #0d3a5c;
+      --text: #222;
+      --muted: #555;
+      --light: #f7f5f2;
+      --border: #ddd;
+      --body-font: 'Source Sans 3', sans-serif;
+      --serif: 'EB Garamond', Georgia, serif;
+    }
+
+    body {
+      font-family: var(--body-font);
+      color: var(--text);
+      background: #fff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── SIDEBAR ── */
+    aside {
+      width: var(--sidebar-width);
+      min-height: 100vh;
+      background: var(--light);
+      border-right: 1px solid var(--border);
+      padding: 2.2rem 1.4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      overflow-y: auto;
+    }
+
+    aside h1 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--accent);
+      line-height: 1.25;
+    }
+
+    aside .title-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: -0.4rem;
+    }
+
+    aside .prof-pic {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      margin-top: 0.3rem;
+    }
+
+    aside .email {
+      font-size: 0.8rem;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    aside nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding-top: 0.2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 0.2rem;
+    }
+
+    aside nav ul li a {
+      font-size: 0.88rem;
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    aside nav ul li a:hover { color: var(--link-hover); text-decoration: underline; }
+
+    aside .univer-logo {
+      width: 85%;
+      margin-top: auto;
+      padding-top: 1rem;
+      opacity: 0.85;
+    }
+
+    /* ── MAIN ── */
+    main {
+      margin-left: var(--sidebar-width);
+      padding: 2.8rem 3rem 4rem 3rem;
+      max-width: none;
+      flex: 1;
+    }
+
+    /* ── SECTION HEADINGS ── */
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+      margin-top: 2.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    /* ── PAPER ENTRY ── */
+    .paper {
+      margin-bottom: 1.6rem;
+    }
+
+    .paper-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--link);
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .paper-title:hover { color: var(--link-hover); text-decoration: underline; }
+
+    .paper-venue {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-top: 0.15rem;
+    }
+
+    .paper-venue em { font-style: italic; }
+
+    .paper-venue a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .paper-venue a:hover { color: var(--link-hover); text-decoration: underline; }
+
+    .paper-meta {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .paper-meta a.coauthor {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .paper-meta a.coauthor:hover { text-decoration: underline; }
+
+    /* ── ABSTRACT TOGGLE ── */
+    .abstract-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.05rem 0.45rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: var(--body-font);
+      transition: background 0.15s, color 0.15s;
+      user-select: none;
+    }
+
+    .abstract-toggle:hover {
+      background: var(--light);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .toggle-icon {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .abstract-toggle.open .toggle-icon { transform: rotate(45deg); }
+
+    .abstract-body {
+      display: none;
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.65;
+      margin-top: 0.6rem;
+      padding: 0.75rem 1rem;
+      background: var(--light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .abstract-body.open { display: block; }
+
+    .supp-link {
+      font-size: 0.85rem;
+      color: var(--link);
+      text-decoration: none;
+    }
+    .supp-link:hover { text-decoration: underline; }
+
+    /* ── AWARDS ── */
+    .paper-awards {
+      margin-top: 0.45rem;
+      padding-left: 1.1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .paper-awards li { margin-bottom: 0.15rem; }
+    .paper-awards a { color: var(--link); text-decoration: none; }
+    .paper-awards a:hover { text-decoration: underline; }
+
+    .updated-tag {
+      font-size: 0.78rem;
+      color: #b34a26;
+      font-family: var(--body-font);
+      font-style: italic;
+      margin-left: 0.4rem;
+    }
+
+    .never-sub {
+      font-style: italic;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      body { flex-direction: column; }
+      aside { position: relative; width: 100%; min-height: unset; border-right: none; border-bottom: 1px solid var(--border); }
+      main { margin-left: 0; padding: 1.5rem; }
+      aside .univer-logo { margin-top: 1rem; width: 50%; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body {
+        display: block;
+        font-size: 10pt;
+        color: #000;
+        background: #fff;
+      }
+      aside {
+        position: static;
+        width: 100%;
+        min-height: unset;
+        background: none;
+        border-right: none;
+        border-bottom: 1px solid #999;
+        padding: 0 0 0.5rem;
+        margin-bottom: 1rem;
+        display: block;
+      }
+      aside h1 { display: inline; margin-right: 0.5rem; }
+      aside .title-label { display: inline; font-size: 10pt; }
+      aside .prof-pic,
+      aside .univer-logo,
+      aside nav { display: none; }
+      aside .email { display: inline; margin-left: 0.5rem; }
+      main {
+        margin-left: 0;
+        padding: 0;
+      }
+      h2 {
+        margin-top: 1rem;
+        page-break-after: avoid;
+      }
+      .paper {
+        page-break-inside: avoid;
+        margin-bottom: 0.7rem;
+      }
+      .paper-title { color: #000; font-size: 11pt; }
+      .paper-venue, .paper-meta { color: #000; }
+      .abstract-toggle { display: none; }
+      .abstract-body {
+        display: none;
+      }
+      .paper-awards { font-size: 9pt; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <h1>William Mullins</h1>
+    <p class="title-label">Associate Professor of Finance<br>Rady School, UC San Diego</p>
+
+    <img class="prof-pic" src="./img/proff.png" alt="William Mullins">
+
+    <p class="email">wmullins@ucsd.edu</p>
+
     <nav>
-      <div>
-        <div class="container">
-          <h1>William Mullins</h1>
-          <span>Associate Professor of Finance</span>
-          <ul>
-            <!-- <li><a href="#papers">Research Papers</a></li> -->
-            <li>
-              <a
-                href="https://drive.google.com/file/d/1VK5cnI-iITBgYWflyEq7GVO_EskBGduT/view"
-                target="_blank"
-              >CV</a>
-            </li>
-            <li>
-              <a
-                href="https://rady.ucsd.edu/faculty-research/faculty/william-mullins.html"
-                target="_blank"
-              >University bio</a>
-            </li>
-            <li>
-              <a
-                href="https://scholar.google.com/citations?user=wZ6rd18AAAAJ&hl=en"
-                target="_blank"
-              >Google Scholar</a>
-            </li>
-            <!-- <li><a href="#">Data</a></li> -->
-          </ul>
-          <img class="prof-pic" src="./img/proff.png" alt="profIMG" />
-          <div class="status">
-            Contact: wmullins@ucsd.edu
-          </div>
-          <img
-            class="univer-logo"
-            src="./img/univerLogo.png"
-            alt="UniversityLogo"
-          />
-          <hr />
-        </div>
-      </div>
+      <ul class="nav-jump">
+        <li><a href="#working-papers">Working Papers</a></li>
+        <li><a href="#publications">Publications</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://drive.google.com/file/d/1VK5cnI-iITBgYWflyEq7GVO_EskBGduT/view" target="_blank" rel="noopener noreferrer">CV</a></li>
+        <li><a href="https://rady.ucsd.edu/faculty-research/faculty/william-mullins.html" target="_blank" rel="noopener noreferrer">University bio</a></li>
+        <li><a href="https://scholar.google.com/citations?user=wZ6rd18AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+      </ul>
     </nav>
-    <!-- Navbar Left Side -->
 
-    <!-- RIGHT SIDE: main Section -->
-    <main>
-      <h3 id="working-papers">Working papers</h3>
+    <img class="univer-logo" src="./img/univerLogo.png" alt="UC San Diego">
+  </aside>
 
-      <!-- Link Title: Dissecting Racial Politicization -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href=" https://drive.google.com/file/d/1DRrWiRiuzqrixOhLyRA9JOQeYF8so3DJ/view?usp=sharing"
-          >Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program 
-        </a>
-      </p>
-      <!-- Link Text -->
-      <p class="text">
-        (with Carlos Avenancio-Leon and Troup Howard)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4737232"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(0)" id="btn0" class="special-link btn">
-          Abstract
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <h2 id="working-papers">Working Papers</h2>
+
+    <!-- Dissecting Racial Politicization -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1DRrWiRiuzqrixOhLyRA9JOQeYF8so3DJ/view?usp=sharing">
+        Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program
+      </a>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.avenancioleon.com" target="_blank" rel="noopener noreferrer">Carlos Avenancio-Leon</a>
+          and
+          <a class="coauthor" href="http://www.trouphoward.com" target="_blank" rel="noopener noreferrer">Troup Howard</a>
+        </span>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4737232">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text0" class="abs-text">
-          We explore long-run racial polarization induced by the original Food Stamps Program: a major policy choice to expand the social safety net in the United States in the 1960s and 1970s. Combining the county-level rollout with an experience-exposure DiD design, we use voter microdata for 175M Americans to compare lifetime voting patterns as of 2020 between those who experienced this expansion of the safety net as adults and those who came of age in a world where Food Stamps was an established feature of the redistributive landscape. Exposure to Food Stamps rollout generates large racial political polarization that persists fifty years later: White people are more likely to register and vote as Republicans, and Black voters are more likely to register and vote as Democrats. These effects are not driven by age, historical experiences, life cycle factors, or changing racial attitudes over the 20th century. We link these findings to a model of partisan competition which illustrates why parties may seek advantage by deliberately politicizing voter perceptions of public policies. Using congressional speeches, survey data, and voting outcomes from the rollout period, we show that short-run evidence is consistent with polarization unfolding in ways suggested by our model. Our results suggest that today's politicization of public policies can be highly consequential tomorrow: in this setting, we find electoral impacts persisting for at least a half-century.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        We explore long-run racial polarization induced by the original Food Stamps Program: a major policy choice to expand the social safety net in the United States in the 1960s and 1970s. Combining the county-level rollout with an experience-exposure DiD design, we use voter microdata for 175M Americans to compare lifetime voting patterns as of 2020 between those who experienced this expansion of the safety net as adults and those who came of age in a world where Food Stamps was an established feature of the redistributive landscape. Exposure to Food Stamps rollout generates large racial political polarization that persists fifty years later: White people are more likely to register and vote as Republicans, and Black voters are more likely to register and vote as Democrats. These effects are not driven by age, historical experiences, life cycle factors, or changing racial attitudes over the 20th century. We link these findings to a model of partisan competition which illustrates why parties may seek advantage by deliberately politicizing voter perceptions of public policies. Using congressional speeches, survey data, and voting outcomes from the rollout period, we show that short-run evidence is consistent with polarization unfolding in ways suggested by our model. Our results suggest that today's politicization of public policies can be highly consequential tomorrow: in this setting, we find electoral impacts persisting for at least a half-century.
+      </div>
+    </div>
 
-      <!-- Link Title: Celebrity Persuasion -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1_iGLWU81KQlmB7LzruK3xuNvsJ3A_egV/view?usp=sharing"
-          >Celebrity Persuasion 
-        </a>
-      </p>
-      <!-- Link Text -->
-      <p class="text">
-        (with Matteo Benetton, Marina Niessner and Jan Toczynski)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310337"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-		  &nbsp;&nbsp;
-        <button onclick="openAbstract(1)" id="btn1" class="special-link btn">
-          Abstract
+    <!-- Celebrity Persuasion -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1_iGLWU81KQlmB7LzruK3xuNvsJ3A_egV/view?usp=sharing">
+        Celebrity Persuasion
+      </a>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://sites.google.com/view/matteobenetton/home" target="_blank" rel="noopener noreferrer">Matteo Benetton</a>,
+          <a class="coauthor" href="https://www.marinaniessner.com/" target="_blank" rel="noopener noreferrer">Marina Niessner</a>
+          and
+          <a class="coauthor" href="https://www.jantoczynski.com" target="_blank" rel="noopener noreferrer">Jan Toczynski</a>
+        </span>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310337">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text1" class="abs-text">
-		Celebrities have long leveraged their influence to shape outcomes in politics, marketing, and now in cryptocurrency markets. Using survey, market, and transaction-level data, we examine the persuasion rates of celebrity cryptocurrency endorsements on Twitter. Investors appear to treat celebrity tweets as financial advice: controlling for news, the probability of cryptocurrency investment by individuals on tweet days increases by 14%, with stronger effects for first-time investors. The tweets also impact equilibrium outcomes: market trading volume increases by 11% in the hour following a celebrity tweet. Finally, a representative retail investor who buys following these tweets earns negative returns after transaction costs.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        Celebrities have long leveraged their influence to shape outcomes in politics, marketing, and now in cryptocurrency markets. Using survey, market, and transaction-level data, we examine the persuasion rates of celebrity cryptocurrency endorsements on Twitter. Investors appear to treat celebrity tweets as financial advice: controlling for news, the probability of cryptocurrency investment by individuals on tweet days increases by 14%, with stronger effects for first-time investors. The tweets also impact equilibrium outcomes: market trading volume increases by 11% in the hour following a celebrity tweet. Finally, a representative retail investor who buys following these tweets earns negative returns after transaction costs.
+      </div>
+    </div>
 
-      <!-- Link Title: Entity Neutering -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1JRQ2iMVC9meyOirYlaDoefzGyEilewGd/view?usp=sharing"
-          >Entity Neutering [Updated January 2026!]</a>
-      </p>
-      <!-- Link Text -->
-      <p class="text">
-        (with Joey Engelberg, Asaf Manela, and Luka Vulicevic)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5182756"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(2)" id="btn2" class="special-link btn">
-          Abstract
+    <!-- Entity Neutering -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1JRQ2iMVC9meyOirYlaDoefzGyEilewGd/view?usp=sharing">
+        Entity Neutering<span class="updated-tag">Updated January 2026</span>
+      </a>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm" target="_blank" rel="noopener noreferrer">Joey Engelberg</a>,
+          <a class="coauthor" href="https://asaf.manela.org" target="_blank" rel="noopener noreferrer">Asaf Manela</a>,
+          and
+          <a class="coauthor" href="https://www.lukavulicevic.com" target="_blank" rel="noopener noreferrer">Luka Vulicevic</a>
+        </span>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5182756">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text2" class="abs-text">
-		Cutting-edge LLMs are trained on recent data, creating a concern about look-ahead bias. We propose a solution called entity neutering: using LLMs to find and remove all identifying information from text. Our procedure uses an LLM agent that iteratively (i) masks entity-related terms and (ii) paraphrases the text until an independent LLM fails to recognize the target company from the text. In a sample of 250,000 financial news articles we verify that, after neutering, ChatGPT and other LLMs identify the subject firm at the rate of random chance.  Among the unidentified articles, the sentiment extracted from the raw text and the neutered text agree more than 95\% of the time and have similar return predictability, with the difference providing an upper bound on look-ahead bias.  The evidence here suggests that LLMs are able to effectively neuter text while maintaining semantic content.  For look-ahead bias, LLMs can be both the problem and the solution.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        Cutting-edge LLMs are trained on recent data, creating a concern about look-ahead bias. We propose a solution called <em>entity neutering</em>: using LLMs to find and remove all identifying information from text. Our procedure uses an LLM agent that iteratively (i) masks entity-related terms and (ii) paraphrases the text until an independent LLM fails to recognize the target company from the text. In a sample of over 500,000 financial news articles we verify that, after neutering, ChatGPT and other LLMs identify the subject firm at the rate of random chance. Among the unidentified articles, the sentiment extracted from the raw text and the neutered text agree more than 90% of the time and have similar return predictability, with the difference providing an upper bound on look-ahead bias. We also demonstrate entity neutering on longer texts: MD&amp;As and earnings call transcripts. Overall, the evidence suggests that LLMs are able to effectively neuter text while maintaining semantic content. For look-ahead bias, LLMs can be both the problem and the solution.
+      </div>
+    </div>
 
-      <!-- Link Title: Market Signals from Social Media -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1dGrrHaW0D5tTX7IC9Ygwh7UDjFPOAlAr/view?usp=sharing"
-          >Market Signals from Social Media</a>
-      </p>
-      <!-- Link Text -->
-      <p class="text">
-        (with Tony Cookson, Runjing Lu, and Marina Niessner)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187350"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(3)" id="btn3" class="special-link btn">
-          Abstract
+    <!-- Market Signals from Social Media -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1dGrrHaW0D5tTX7IC9Ygwh7UDjFPOAlAr/view?usp=sharing">
+        Market Signals from Social Media
+      </a>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>,
+          <a class="coauthor" href="https://www.runjinglu.com/" target="_blank" rel="noopener noreferrer">Runjing Lu</a>,
+          and
+          <a class="coauthor" href="https://www.marinaniessner.com/" target="_blank" rel="noopener noreferrer">Marina Niessner</a>
+        </span>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187350">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text3" class="abs-text">
-          This paper develops daily market-wide sentiment and attention indexes derived from millions of posts across major investor social media platforms. We find that sentiment extrapolates from past market-wide returns and exhibits a strong reversal. In contrast, attention predicts negative returns as a continuation of previous trends. The two indexes have distinct predictions for aggregate trading: abnormal trading rises when sentiment is low and attention is high. To identify the drivers of attention and sentiment, we use a shock to data sharing networks: We find sentiment spreads through real firm connections while attention does not. Moreover, attention rises after abnormally high trading, while sentiment rises after abnormally high returns. This extrapolative return pattern is asymmetric, primarily driven by negative market jumps. These findings provide new evidence on the daily market dynamics of sentiment and attention.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        This paper develops daily market-wide sentiment and attention indexes derived from millions of posts across major investor social media platforms. We find that sentiment extrapolates from past market-wide returns and exhibits a strong reversal. In contrast, attention predicts negative returns as a continuation of previous trends. The two indexes have distinct predictions for aggregate trading: abnormal trading rises when sentiment is low and attention is high. To identify the drivers of attention and sentiment, we use a shock to data sharing networks: We find sentiment spreads through real firm connections while attention does not. Moreover, attention rises after abnormally high trading, while sentiment rises after abnormally high returns. This extrapolative return pattern is asymmetric, primarily driven by negative market jumps. These findings provide new evidence on the daily market dynamics of sentiment and attention.
+      </div>
+    </div>
 
-      <!-- Link Title: Immigration and Credit in America -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1yr-qm1zBX_s_q6u2dxtpHkFYmXmEMWql/view?usp=sharing"
-          >Immigration and Credit in America</a>
-      </p>
-      <!-- Link Text -->
-      <p class="text">
-        (with Tony Cookson and Benedict Guttman-Kenney)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(4)" id="btn4" class="special-link btn">
-          Abstract
+    <!-- Immigration and Credit -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1yr-qm1zBX_s_q6u2dxtpHkFYmXmEMWql/view?usp=sharing">
+        Immigration and Credit in America
+      </a>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>
+          and
+          <a class="coauthor" href="https://www.benedictgk.com" target="_blank" rel="noopener noreferrer">Benedict Guttman-Kenney</a>
+        </span>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text4" class="abs-text">
-		We study the assimilation of immigrants into U.S. consumer credit markets. Although immigrants arrive without a U.S. credit history, we find that they are positively selected: immigrants’ average credit scores at age thirty are 27 points higher than non-immigrants of the same age and 5-digit ZIP, and this gap widens with age. Despite greater creditworthiness, immigrants are less likely than non-immigrants to have ever had an auto loan or a mortgage by age 37, the end of our sample window. We compare credit access of same-age immigrants arriving one year apart, finding persistent differences in credit access lasting over a decade after immigration. Our results point to the importance of time in the U.S. for accessing credit.        </span>
-      </p>
-    </main>
-    <!-- End Working Papers -->
+      </div>
+      <div class="abstract-body">
+        We study the assimilation of immigrants into U.S. consumer credit markets. Although immigrants arrive without a U.S. credit history, we find that they are positively selected: immigrants' average credit scores at age thirty are 27 points higher than non-immigrants of the same age and 5-digit ZIP, and this gap widens with age. Despite greater creditworthiness, immigrants are less likely than non-immigrants to have ever had an auto loan or a mortgage by age 37, the end of our sample window. We compare credit access of same-age immigrants arriving one year apart, finding persistent differences in credit access lasting over a decade after immigration. Our results point to the importance of time in the U.S. for accessing credit.
+      </div>
+    </div>
 
-    <br>
- 
-    <!-- Publications -->
-    <main>
-      <h3 id="publications" style="margin-top: 20px">Publications</h3>
 
-      <!-- Publication 9. Cross-State Strategic Voting -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1_hccfk8or4322_uz36OUQDhKKv7Jj3Zz/view"
-          >9. Cross-State Strategic Voting
-        </a>
-        <span>
-          <a href="https://www.aeaweb.org/articles?id=10.1257/pol.20240630" 
-            ><br> American Economic Journal: Economic Policy (accepted)</a
-          >
+    <h2 id="publications">Publications</h2>
+
+    <!-- 9. Cross-State Strategic Voting -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1_hccfk8or4322_uz36OUQDhKKv7Jj3Zz/view">
+        9. Cross-State Strategic Voting
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1257/pol.20240630" target="_blank" rel="noopener noreferrer"><em>American Economic Journal: Economic Policy</em></a>, 2026
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://econweb.ucsd.edu/~gdahl/" target="_blank" rel="noopener noreferrer">Gordon Dahl</a>,
+          <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm" target="_blank" rel="noopener noreferrer">Joey Engelberg</a>
+          and
+          <a class="coauthor" href="https://www.runjinglu.com/" target="_blank" rel="noopener noreferrer">Runjing Lu</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://econweb.ucsd.edu/~gdahl/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Gordon Dahl</a>,
-        <a
-          href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Joey Engelberg</a>
-        and
-        <a
-          href="https://www.runjinglu.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Runjing Lu</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4354261"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <!-- Added VoxEU link before Abstract -->
-        <a class="special-link" href="https://cepr.org/voxeu/columns/double-registration-and-strategic-voting-across-state-lines" target="_blank">VoxEU</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(5)" id="btn5" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4354261">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://cepr.org/voxeu/columns/double-registration-and-strategic-voting-across-state-lines">VoxEU</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text5" class="abs-text">
-          We estimate that 3.1% of US voters, or 6.1 million individuals, were registered to vote in two states in 2020, opening up the possibility for them to choose where to vote. Double registrants are concentrated in the wealthiest zipcodes and respond to both incentives and costs, disproportionately choosing to vote in swing states (higher incentive) and states which automatically send out mail-in ballots (lower cost). We call this behavior Cross-State Strategic Voting. While others have documented strategic incentives on who to vote for, this paper is the first to consider strategic incentives on where to vote.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        We estimate that 3.1% of US voters, or 6.1 million individuals, were registered to vote in two states in 2020, opening up the possibility for them to choose where to vote. Double registrants are concentrated in the wealthiest zipcodes and respond to both incentives and costs, disproportionately choosing to vote in swing states (higher incentive) and states which automatically send out mail-in ballots (lower cost). We call this behavior Cross-State Strategic Voting. While others have documented strategic incentives on who to vote for, this paper is the first to consider strategic incentives on where to vote.
+      </div>
+    </div>
 
-      <!-- Publication 8. Political Sentiment and Innovation: Evidence from Patenters -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/17Jsj5YdF-DsXPVZuJDyRYRFSjfOp6tb2/view"
-          >8. Political Sentiment and Innovation: Evidence from Patenters
-        </a>
-        <span>
-          <a 
-		  href="https://doi.org/10.1093/rfs/hhaf029"
-            ><br> Review of Financial Studies (2025)</a
-          >
+    <!-- 8. Political Sentiment and Innovation -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17Jsj5YdF-DsXPVZuJDyRYRFSjfOp6tb2/view">
+        8. Political Sentiment and Innovation: Evidence from Patenters
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1093/rfs/hhaf029" target="_blank" rel="noopener noreferrer"><em>Review of Financial Studies</em></a>, 2025
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm" target="_blank" rel="noopener noreferrer">Joey Engelberg</a>,
+          <a class="coauthor" href="https://www.runjinglu.com/" target="_blank" rel="noopener noreferrer">Runjing Lu</a>
+          and
+          <a class="coauthor" href="https://sites.google.com/site/rrtowns/" target="_blank" rel="noopener noreferrer">Rick Townsend</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Joey Engelberg</a>,
-        <a
-          href="https://www.runjinglu.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Runjing Lu</a>
-        and
-        <a
-          href="https://sites.google.com/site/rrtowns/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Rick Townsend</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4176649"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(6)" id="btn6" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4176649">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text6" class="abs-text">
-          We document political sentiment effects on U.S. inventors. Democratic inventors
-          are more likely to patent (relative to Republicans) after the 2008 election of Obama
-          but less likely after the 2016 election of Trump. These effects are at least twice as
-          strong among politically active Democrats and are present even within firms and
-          within firm × technology. We also show that partisans tend to cluster in technologies
-          (e.g., Democrats in Biotechnology and Republicans in Weapons), so that sentiment
-          effects aggregate up to more patents in the technologies dominated by the winning
-          party.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        We document political sentiment effects on U.S. inventors. Democratic inventors are more likely to patent (relative to Republicans) after the 2008 election of Obama but less likely after the 2016 election of Trump. These effects are at least twice as strong among politically active Democrats and are present even within firms and within firm × technology. We also show that partisans tend to cluster in technologies (e.g., Democrats in Biotechnology and Republicans in Weapons), so that sentiment effects aggregate up to more patents in the technologies dominated by the winning party.
+      </div>
+    </div>
 
-      <!-- Publication 7. Partisan Entrepreneurship -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1z6uEN3i2O1UsoDB6hq7kJFijLz3-vBMk/view"
-          >7. Partisan Entrepreneurship
-        </a>
-        <span>
-          <a href=" " target="_blank"
-            ><br> Journal of Finance (forthcoming)</a
-          >
+    <!-- 7. Partisan Entrepreneurship -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1z6uEN3i2O1UsoDB6hq7kJFijLz3-vBMk/view">
+        7. Partisan Entrepreneurship
+      </a>
+      <div class="paper-venue"><a href="https://doi.org/10.1111/jofi.70042" target="_blank" rel="noopener noreferrer"><em>Journal of Finance</em></a>, 2026</div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/index.htm" target="_blank" rel="noopener noreferrer">Joseph Engelberg</a>,
+          <a class="coauthor" href="https://www.jorgeguzman.co/" target="_blank" rel="noopener noreferrer">Jorge Guzman</a>
+          and
+          <a class="coauthor" href="https://www.runjinglu.com/" target="_blank" rel="noopener noreferrer">Runjing Lu</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/index.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Joseph Engelberg</a>,
-        <a
-          href="https://www.jorgeguzman.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Jorge Guzman</a>
-        and
-        <a
-          href="https://www.runjinglu.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Runjing Lu</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3821106"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://osf.io/preprints/socarxiv/qhs6j"
-          target="_blank"
-          rel="noopener noreferrer"
-          > &nbsp SocArXiv link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(7)" id="btn7" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3821106">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://osf.io/preprints/socarxiv/qhs6j">SocArXiv</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text7" class="abs-text">
-          Republicans start more firms than Democrats. In a sample of 40 million party-identified Americans between 2005 and 2017, we find that 5.5% of Republicans and 3.7% of Democrats become entrepreneurs. This partisan entrepreneurship gap is time-varying: Republicans increase their relative entrepreneurship during Republican administrations and decrease it during Democratic administrations, amounting to a partisan reallocation of 170,000 new firms over our 13-year sample. We find sharp changes in partisan entrepreneurship around the elections of President Obama and President Trump, and the strongest effects among the most politically active partisans: those that donate and vote.
-        </span>
-      </p>
-      <!-- Awards for Partisan Entrepreneurship (2 prizes) -->
-      <ul>
-        <li>
-          Best Paper Prize in Corporate Finance at the 2022 
-          <a href="https://www.midwestfinance.org/past-annual-meetings" target="_blank"
-            >MFA Conference</a
-          >
-        </li>
-        <li>
-          Best Paper Prize at the 2021
-          <a
-            href="https://sites.google.com/site/coloradofinancesummit/conference-awards"
-            target="_blank"
-            >Colorado Finance Summit</a
-          >
-        </li>
+      </div>
+      <div class="abstract-body">
+        Republicans start more firms than Democrats. In a sample of 40 million party-identified Americans between 2005 and 2017, we find that 5.5% of Republicans and 3.7% of Democrats become entrepreneurs. This partisan entrepreneurship gap is time-varying: Republicans increase their relative entrepreneurship during Republican administrations and decrease it during Democratic administrations, amounting to a partisan reallocation of 170,000 new firms over our 13-year sample. We find sharp changes in partisan entrepreneurship around the elections of President Obama and President Trump, and the strongest effects among the most politically active partisans: those that donate and vote.
+      </div>
+      <ul class="paper-awards">
+        <li>Best Paper Prize in Corporate Finance at the 2022 <a href="https://www.midwestfinance.org/past-annual-meetings" target="_blank" rel="noopener noreferrer">MFA Conference</a></li>
+        <li>Best Paper Prize at the 2021 <a href="https://sites.google.com/site/coloradofinancesummit/conference-awards" target="_blank" rel="noopener noreferrer">Colorado Finance Summit</a></li>
       </ul>
+    </div>
 
-      <!-- Publication *. Social Media and Finance (review article) -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1fntlJTGwL9aRY-sJPmjPkblz2__6jk12/view?usp=sharing"
-          >*. Social Media and Finance (review article)
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1093/acrefore/9780190625979.013.957"
-            target="_blank"
-          > <br> Oxford Research Encyclopedia of Economics and Finance (2024)</a>
+    <!-- *. Social Media and Finance (review) -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1fntlJTGwL9aRY-sJPmjPkblz2__6jk12/view?usp=sharing">
+        *. Social Media and Finance (review article)
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1093/acrefore/9780190625979.013.957" target="_blank" rel="noopener noreferrer"><em>Oxford Research Encyclopedia of Economics and Finance</em></a>, 2024
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>
+          and
+          <a class="coauthor" href="https://www.marinaniessner.com/" target="_blank" rel="noopener noreferrer">Marina Niessner</a>
         </span>
-      </p>
-      <p class="text">
-         (with
-        <a
-          href="https://www.tonycookson.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Tony Cookson</a>,
-		and
-        <a
-          href="https://www.marinaniessner.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Marina Niessner</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4806692"
-          target="_blank"
-          rel="noopener noreferrer"
-          > &nbsp SSRN link</a>
-		&nbsp;&nbsp;
-        <button onclick="openAbstract(8)" id="btn8" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4806692">SSRN</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text8" class="abs-text">
-          Social media has become an integral part of the financial information environment, changing the way financial information is produced, consumed and distributed. This article surveys the financial social media literature, distinguishing between research using social media as a lens to shed light on more general financial behavior and research exploring the effects of social media on financial markets. We also review the social media data landscape.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        Social media has become an integral part of the financial information environment, changing the way financial information is produced, consumed and distributed. This article surveys the financial social media literature, distinguishing between research using social media as a lens to shed light on more general financial behavior and research exploring the effects of social media on financial markets. We also review the social media data landscape.
+      </div>
+    </div>
 
-      <!-- Publication 6. The Social Signal -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1RQZf0oL63wc6LXwDUdIeKHbH52JmxIGP/view?usp=sharing"
-          >6. The Social Signal
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1016/j.jfineco.2024.103870"
-            target="_blank"
-          > <br> Journal of Financial Economics (2024)</a>
+    <!-- 6. The Social Signal -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1RQZf0oL63wc6LXwDUdIeKHbH52JmxIGP/view?usp=sharing">
+        6. The Social Signal
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1016/j.jfineco.2024.103870" target="_blank" rel="noopener noreferrer"><em>Journal of Financial Economics</em></a>, 2024
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>,
+          <a class="coauthor" href="https://www.runjinglu.com/" target="_blank" rel="noopener noreferrer">Runjing Lu</a>
+          and
+          <a class="coauthor" href="https://www.marinaniessner.com/" target="_blank" rel="noopener noreferrer">Marina Niessner</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://www.tonycookson.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Tony Cookson</a>,
-        <a
-          href="https://www.runjinglu.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Runjing Lu</a>
-        and
-        <a
-          href="https://www.marinaniessner.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Marina Niessner</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241505"
-          target="_blank"
-          rel="noopener noreferrer"
-          > &nbsp SSRN link</a>
-		<a
-          class="special-link"
-          href="https://data.mendeley.com/datasets/xffyybvw4j/1"
-          target="_blank"
-          rel="noopener noreferrer"
-          > &nbsp Data (PC1s, 2012-2021)</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(9)" id="btn9" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241505">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://data.mendeley.com/datasets/xffyybvw4j/1">Data (PC1s, 2012–2021)</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text9" class="abs-text">
-          We examine social media attention and sentiment from three major platforms: Twitter, StockTwits, and Seeking Alpha. We find that, even after controlling for firm disclosures and news, attention is highly correlated across platforms, but sentiment is not: its first principal component explains little more variation than purely idiosyncratic sentiment. Using market events, we attribute differences across platforms to differences in users (e.g., professionals versus novices) and differences in platform design (e.g., character limits in posts). We also find that sentiment and attention contain different return-relevant information. Sentiment predicts positive next-day returns, but attention predicts negative next-day returns. These results highlight the importance of considering both social media sentiment and attention, and of distinguishing between different investor social media platforms.
-        </span>
-      </p>
-      <!-- Awards for The Social Signal (3 prizes) -->
-      <ul>
-		<li>
-          Editor's choice, Journal of Financial Economics
-        </li>
-		<li>
-          Best Paper Prize in Investments and Asset pricing at the 2023 
-          <a href="https://www.midwestfinance.org/past-annual-meetings" target="_blank"
-            >MFA Conference</a
-          >
-        </li>
-		<li>
-          Best Paper Award 11th Michigan State FCU Conference, 2022
-        </li>
+      </div>
+      <div class="abstract-body">
+        We examine social media attention and sentiment from three major platforms: Twitter, StockTwits, and Seeking Alpha. We find that, even after controlling for firm disclosures and news, attention is highly correlated across platforms, but sentiment is not: its first principal component explains little more variation than purely idiosyncratic sentiment. Using market events, we attribute differences across platforms to differences in users (e.g., professionals versus novices) and differences in platform design (e.g., character limits in posts). We also find that sentiment and attention contain different return-relevant information. Sentiment predicts positive next-day returns, but attention predicts negative next-day returns. These results highlight the importance of considering both social media sentiment and attention, and of distinguishing between different investor social media platforms.
+      </div>
+      <ul class="paper-awards">
+        <li>Editor's choice, Journal of Financial Economics</li>
+        <li>Best Paper Prize in Investments and Asset Pricing at the 2023 <a href="https://www.midwestfinance.org/past-annual-meetings" target="_blank" rel="noopener noreferrer">MFA Conference</a></li>
+        <li>Best Paper Award, 11th Michigan State FCU Conference, 2022</li>
       </ul>
+    </div>
 
-      <!-- Publication 5. Unconventional Monetary Policy Transmission and Bank Lending Relationships -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1xep-gUkvsexVCpWmw3NYOQNBNYv92VI-/view?usp=sharing"
-          >5. Unconventional Monetary Policy Transmission and Bank Lending Relationships 
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1287/mnsc.2022.01871"
-            target="_blank"
-          > <br> Management Science (2024)</a>
+    <!-- 5. Unconventional Monetary Policy Transmission -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1xep-gUkvsexVCpWmw3NYOQNBNYv92VI-/view?usp=sharing">
+        5. Unconventional Monetary Policy Transmission and Bank Lending Relationships
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1287/mnsc.2022.01871" target="_blank" rel="noopener noreferrer"><em>Management Science</em></a>, 2024
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://sites.google.com/site/anneduquerroy/" target="_blank" rel="noopener noreferrer">Anne Duquerroy</a>
+          and
+          <a class="coauthor" href="http://christophecahn.fr/" target="_blank" rel="noopener noreferrer">Christophe Cahn</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://sites.google.com/site/anneduquerroy/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Anne Duquerroy</a>
-        and
-        <a
-          href="http://christophecahn.fr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Christophe Cahn</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2970199"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          target="_blank"
-          href="https://osf.io/preprints/socarxiv/vgk25/"
-          > SocArXiv link</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(10)" id="btn10" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2970199">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://osf.io/preprints/socarxiv/vgk25/">SocArXiv</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text10" class="abs-text">
-          Firms with only one bank relationship make up the majority of firms in many economies. This paper explores whether policy-driven lending is differentially transmitted to single-bank firms in comparison with the multibank firms that are the focus of the literature. Using unique variation in the ECB’s very long-term refinancing operations (VLTROs), which affected lending to firms discontinuously across credit ratings but within banks, we find selective transmission of VLTRO liquidity to single-bank firms. Banks apply higher lending standards to single-bank firms, with banking relationships determining both new lending and lending maturity. By contrast, banks appear to transmit policy lending near-uniformly across multibank firms. 
-        </span>
-      </p>
-      <!-- Award for Unconventional Monetary Policy (1 prize) -->
-      <ul>
-        <li>
-          Best Paper Prize at the 
-          <a
-            href="https://sites.google.com/site/coloradofinancesummit/conference-awards"
-            target="_blank"
-            >Colorado Finance Summit</a
-          >
-        </li>
+      </div>
+      <div class="abstract-body">
+        Firms with only one bank relationship make up the majority of firms in many economies. This paper explores whether policy-driven lending is differentially transmitted to single-bank firms in comparison with the multibank firms that are the focus of the literature. Using unique variation in the ECB's very long-term refinancing operations (VLTROs), which affected lending to firms discontinuously across credit ratings but within banks, we find selective transmission of VLTRO liquidity to single-bank firms. Banks apply higher lending standards to single-bank firms, with banking relationships determining both new lending and lending maturity. By contrast, banks appear to transmit policy lending near-uniformly across multibank firms.
+      </div>
+      <ul class="paper-awards">
+        <li>Best Paper Prize at the <a href="https://sites.google.com/site/coloradofinancesummit/conference-awards" target="_blank" rel="noopener noreferrer">Colorado Finance Summit</a></li>
       </ul>
+    </div>
 
-      <!-- Publication 4. Echo Chambers -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="./papers/Echo_public_Feb2022.pdf"
-          download="Echo_public_Feb2022.pdf"
-          >4. Echo Chambers
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1093/rfs/hhac058"
-            target="_blank"
-          > <br> Review of Financial Studies (2023)</a>
+    <!-- 4. Echo Chambers -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Echo_public_Feb2022.pdf" download="Echo_public_Feb2022.pdf">
+        4. Echo Chambers
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1093/rfs/hhac058" target="_blank" rel="noopener noreferrer"><em>Review of Financial Studies</em></a>, 2023
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>
+          and
+          <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm" target="_blank" rel="noopener noreferrer">Joey Engelberg</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://www.tonycookson.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Tony Cookson</a>
-        and
-        <a
-          href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Joey Engelberg</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3603107"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          target="_blank"
-          href="https://osf.io/preprints/socarxiv/n2q9h/"
-          >SocArXiv link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://drive.google.com/file/d/1ZW4yVQdlwd2fXzP4X_8rpz1Nv_hotg0O/view"
-          target="_blank"
-          >Slides</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fe4njswsvol8ypd1%2FEchoChambers_data_topost.zip%3Fdl%3D1"
-          target="_blank"
-          >Data</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(11)" id="btn11" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3603107">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://osf.io/preprints/socarxiv/n2q9h/">SocArXiv</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZW4yVQdlwd2fXzP4X_8rpz1Nv_hotg0O/view">Slides</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fe4njswsvol8ypd1%2FEchoChambers_data_topost.zip%3Fdl%3D1">Data</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text11" class="abs-text">
-          We find evidence of selective exposure to confirmatory information among 300,000 users on the investor social network StockTwits. Self-described bulls are 5 times more likely to follow a user with a bullish view of the same stock than self-described bears. This tendency is strong even among professional investors and is more pronounced on earnings announcement days. Placing oneself in an information “echo chamber” generates significant differences in the newsfeeds of bulls and bears: over a 50-day period, a bull will see 70 more bullish messages and 15 fewer bearish messages than a bear over the same period. Selective exposure creates “information silos” in which the diversity of received signals is high across users’ newsfeeds but is low within users’ newsfeeds. Finally, we show that this siloing of information is positively related to trading volume.
-        </span>
-      </p>
-      <!-- Awards for Echo Chambers (4 prizes) -->
-      <ul class="text-ul">
-        <li>
-          Best Paper Prize in Asset Pricing at the
-          <a href="https://westernfinance.org/conference-2021/" target="_blank"
-            >2021 WFA conference</a
-          >
-        </li>
-        <li>
-          Best Paper Prize in Markets and Trading at the 2021
-          <a href="https://www.midwestfinance.org/past-annual-meetings" target="_blank"
-            >MFA Conference</a
-          >
-        </li>
+      </div>
+      <div class="abstract-body">
+        We find evidence of selective exposure to confirmatory information among 300,000 users on the investor social network StockTwits. Self-described bulls are 5 times more likely to follow a user with a bullish view of the same stock than self-described bears. This tendency is strong even among professional investors and is more pronounced on earnings announcement days. Placing oneself in an information "echo chamber" generates significant differences in the newsfeeds of bulls and bears: over a 50-day period, a bull will see 70 more bullish messages and 15 fewer bearish messages than a bear over the same period. Selective exposure creates "information silos" in which the diversity of received signals is high across users' newsfeeds but is low within users' newsfeeds. Finally, we show that this siloing of information is positively related to trading volume.
+      </div>
+      <ul class="paper-awards">
+        <li>Best Paper Prize in Asset Pricing at the <a href="https://westernfinance.org/conference-2021/" target="_blank" rel="noopener noreferrer">2021 WFA conference</a></li>
+        <li>Best Paper Prize in Markets and Trading at the 2021 <a href="https://www.midwestfinance.org/past-annual-meetings" target="_blank" rel="noopener noreferrer">MFA Conference</a></li>
         <li>Kahle Family Research Excellence Award Winner 2024, UC Boulder</li>
         <li>First Prize, 2021 CQA academic competition</li>
       </ul>
+    </div>
 
-      <!-- Publication 3. Partisan Fertility and Presidential Elections -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="./papers/Partisan Fertility_Dec2021.pdf"
-          download="Partisan Fertility_Dec2021.pdf"
-          >3. Partisan Fertility and Presidential Elections
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1257/aeri.20210485"
-            target="_blank"
-          > <br> American Economic Review: Insights (2022)</a>
+    <!-- 3. Partisan Fertility -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Partisan Fertility_Dec2021.pdf" download="Partisan Fertility_Dec2021.pdf">
+        3. Partisan Fertility and Presidential Elections
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1257/aeri.20210485" target="_blank" rel="noopener noreferrer"><em>American Economic Review: Insights</em></a>, 2022
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://econweb.ucsd.edu/~gdahl/" target="_blank" rel="noopener noreferrer">Gordon Dahl</a>
+          and
+          <a class="coauthor" href="https://www.runjinglu.com/" target="_blank" rel="noopener noreferrer">Runjing Lu</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://econweb.ucsd.edu/~gdahl/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Gordon Dahl</a>
-        and
-        <a
-          href="https://www.runjinglu.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Runjing Lu</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3822013"
-          target="_blank"
-          rel="noopener noreferrer"
-          >&nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          target="_blank"
-          href="https://osf.io/preprints/socarxiv/yjveb/"
-          >SocArXiv link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://www.nber.org/papers/w29058"
-          target="_blank"
-          >NBER WP</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://cepr.org/about/news/free-dp-download-01-february-2022-partisan-fertility-and-presidential-elections"
-          target="_blank"
-          >Co-author video</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://drive.google.com/file/d/18fdvhL3myXWIXHSR014x-NGMSQMryvzH/view"
-          target="_blank"
-          >Slides</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(12)" id="btn12" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3822013">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://osf.io/preprints/socarxiv/yjveb/">SocArXiv</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://www.nber.org/papers/w29058">NBER WP</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://cepr.org/about/news/free-dp-download-01-february-2022-partisan-fertility-and-presidential-elections">Co-author video</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/18fdvhL3myXWIXHSR014x-NGMSQMryvzH/view">Slides</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text12" class="abs-text">
-          Changes in political leadership drive large changes in economic optimism. We exploit the surprise 2016 election of Trump to identify the effects of a shift in political power on one of the most consequential household decisions: whether to have a child. Republican-leaning counties experience a sharp and persistent increase in fertility relative to Democratic counties: a 0.7 to 1.4% increase in annual births, depending on the intensity of partisanship. Hispanics, a group targeted by Trump, see fertility fall relative to non-Hispanics, especially compared to rural or evangelical whites. Further, following Trump pre-election campaign visits, relative Hispanic fertility declines.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        Changes in political leadership drive large changes in economic optimism. We exploit the surprise 2016 election of Trump to identify the effects of a shift in political power on one of the most consequential household decisions: whether to have a child. Republican-leaning counties experience a sharp and persistent increase in fertility relative to Democratic counties: a 0.7 to 1.4% increase in annual births, depending on the intensity of partisanship. Hispanics, a group targeted by Trump, see fertility fall relative to non-Hispanics, especially compared to rural or evangelical whites. Further, following Trump pre-election campaign visits, relative Hispanic fertility declines.
+      </div>
+    </div>
 
-      <!-- Publication 2. Does Partisanship Shape Investor Beliefs? Evidence from the COVID-19 Pandemic -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="./papers/Political_covid_SSRNfinal.pdf"
-          download="Political_covid_SSRNfinal.pdf" 
-          >2. Does Partisanship Shape Investor Beliefs? Evidence from the COVID-19 Pandemic
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1093/rapstu/raaa018"
-            target="_blank"
-          > <br> Review of Asset Pricing Studies (2020)</a>
+    <!-- 2. Does Partisanship Shape Investor Beliefs? -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Political_covid_SSRNfinal.pdf" download="Political_covid_SSRNfinal.pdf">
+        2. Does Partisanship Shape Investor Beliefs? Evidence from the COVID-19 Pandemic
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1093/rapstu/raaa018" target="_blank" rel="noopener noreferrer"><em>Review of Asset Pricing Studies</em></a>, 2020
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>
+          and
+          <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm" target="_blank" rel="noopener noreferrer">Joey Engelberg</a>
         </span>
-      </p>
-      <p class="text">
-        (with
-        <a
-          href="https://www.tonycookson.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Tony Cookson</a>
-        and
-        <a
-          href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Joey Engelberg</a>)
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3621067"
-          target="_blank"
-          rel="noopener noreferrer"
-          >SSRN link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          target="_blank"
-          href="https://osf.io/preprints/socarxiv/rwhse/"
-          >SocArXiv link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="https://www.tonycookson.com/data-and-programs"
-          target="_blank"
-          >sentiment time series</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(13)" id="btn13" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3621067">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://osf.io/preprints/socarxiv/rwhse/">SocArXiv</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://www.tonycookson.com/data-and-programs">Sentiment time series</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text13" class="abs-text">
-          We use party-identifying language – like “Liberal Media” and “MAGA”– to identify Republican users on the investor social platform StockTwits. Using a difference-in-difference design, we find that the beliefs of partisan Republicans about equities remain relatively unfazed during the COVID-19 pandemic, while other users become considerably more pessimistic. In cross-sectional tests, we find Republicans become relatively more optimistic about stocks that suffered the most from COVID-19, but more pessimistic about Chinese stocks. Finally, stocks with the greatest partisan disagreement on StockTwits have significantly more trading in the broader market, explaining 28% of the increase in stock turnover during the pandemic.
-        </span>
-      </p>
+      </div>
+      <div class="abstract-body">
+        We use party-identifying language – like "Liberal Media" and "MAGA" – to identify Republican users on the investor social platform StockTwits. Using a difference-in-difference design, we find that the beliefs of partisan Republicans about equities remain relatively unfazed during the COVID-19 pandemic, while other users become considerably more pessimistic. In cross-sectional tests, we find Republicans become relatively more optimistic about stocks that suffered the most from COVID-19, but more pessimistic about Chinese stocks. Finally, stocks with the greatest partisan disagreement on StockTwits have significantly more trading in the broader market, explaining 28% of the increase in stock turnover during the pandemic.
+      </div>
+    </div>
 
-      <!-- Publication 1. How do CEOs see their roles? Management Philosophies and Styles in Family and non-Family Firms -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="./papers/Mgmt_philosophy_jfe.pdf"
-          download="Mgmt_philosophy_jfe.pdf"
-          >1. How do CEOs see their roles? Management Philosophies and Styles in Family and non-Family Firms
-        </a>
-        <span>
-          <a
-            href="https://doi.org/10.1016/j.jfineco.2015.08.011"
-            target="_blank"
-          > <br> Journal of Financial Economics (2016)</a>
+    <!-- 1. Management Philosophies -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Mgmt_philosophy_jfe.pdf" download="Mgmt_philosophy_jfe.pdf">
+        1. How do CEOs see their roles? Management Philosophies and Styles in Family and non-Family Firms
+      </a>
+      <div class="paper-venue">
+        <a href="https://doi.org/10.1016/j.jfineco.2015.08.011" target="_blank" rel="noopener noreferrer"><em>Journal of Financial Economics</em></a>, 2016
+      </div>
+      <div class="paper-meta">
+        <span>With
+          <a class="coauthor" href="https://mitmgmtfaculty.mit.edu/aschoar/" target="_blank" rel="noopener noreferrer">Antoinette Schoar</a>
         </span>
-      </p>
-      <p class="text">
-        (with <a href="https://mitmgmtfaculty.mit.edu/aschoar/" target="_blank">Antoinette Schoar</a>)
-        <a
-          class="special-link"
-          href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2668267"
-          target="_blank"
-          rel="noopener noreferrer"
-          > &nbsp SSRN link</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          target="_blank"
-          href="https://corpgov.law.harvard.edu/2015/11/22/management-philosophies-and-styles-in-family-and-non-family-firms/#more-71976"
-          >Non-technical summary</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="./papers/jfe140741_final_Appendix 1.pdf"
-          download="jfe140741_final_Appendix 1.pdf"
-          target="_blank"
-          >Appendix 1</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="./papers/jfe140741_final_Survey Appendix.pdf"
-          download="jfe140741_final_Survey Appendix.pdf"
-          target="_blank"
-          >Survey Appendix</a>
-        &nbsp;&nbsp;
-        <a
-          class="special-link"
-          href="./papers/jfe140741_Appendix 2 (web only).xlsx"
-          download="jfe140741_Appendix 2 (web only).xlsx"
-          target="_blank"
-          >Appendix 2</a>
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(14)" id="btn14" class="special-link btn">
-          Abstract
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2668267">SSRN</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://corpgov.law.harvard.edu/2015/11/22/management-philosophies-and-styles-in-family-and-non-family-firms/#more-71976">Non-technical summary</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_final_Appendix 1.pdf" download="jfe140741_final_Appendix 1.pdf">Appendix 1</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_final_Survey Appendix.pdf" download="jfe140741_final_Survey Appendix.pdf">Survey Appendix</a>
+        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_Appendix 2 (web only).xlsx" download="jfe140741_Appendix 2 (web only).xlsx">Appendix 2</a>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text14" class="abs-text">
-          Using a survey of 800 Chief Executive Officers (CEOs) in 22 emerging economies, we show that CEOs' management styles and philosophies vary with the ownership and governance structure of their firms. Founders and CEOs of firms with greater family involvement display a greater stakeholder focus and feel more accountable to employees and banks than to shareholders. They also have a more hierarchical management approach, and see their role as maintaining the status quo rather than bringing about change. In contrast, CEOs of non-family firms emphasize shareholder-value-maximization. Finally, firm-level variation in ownership is as important in explaining management philosophies as cross-country or industry-level differences.
-        </span>
-      </p>
-    </main>
-    <!-- End Publications -->
+      </div>
+      <div class="abstract-body">
+        Using a survey of 800 Chief Executive Officers (CEOs) in 22 emerging economies, we show that CEOs' management styles and philosophies vary with the ownership and governance structure of their firms. Founders and CEOs of firms with greater family involvement display a greater stakeholder focus and feel more accountable to employees and banks than to shareholders. They also have a more hierarchical management approach, and see their role as maintaining the status quo rather than bringing about change. In contrast, CEOs of non-family firms emphasize shareholder-value-maximization. Finally, firm-level variation in ownership is as important in explaining management philosophies as cross-country or industry-level differences.
+      </div>
+    </div>
 
-    <br>
-    <br>
 
-    <!-- Permanent Working Papers -->
-    <main>
-      <h3 id="permanent-papers" style="margin-top: 20px">Permanent working papers</h3>
+    <h2 id="permanent-papers">Permanent Working Papers</h2>
 
-      <!-- Permanent Working Paper: Credit Guarantees and New Bank Relationships -->
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1AfOQ4Y6hqRntO89UCyIX_d1PHJg_mxfK/view"
-          >Credit Guarantees and New Bank Relationships
-        </a>
-      </p>
-      <p class="text">
-        (with Patricio Toro)
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(15)" id="btn15" class="special-link btn">
-          Abstract
+    <!-- Credit Guarantees -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1AfOQ4Y6hqRntO89UCyIX_d1PHJg_mxfK/view">
+        Credit Guarantees and New Bank Relationships
+      </a>
+      <div class="paper-meta">
+        <span>With Patricio Toro</span>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">
+          <span class="toggle-icon">+</span> Abstract
         </button>
-        <br />
-        <span id="abs-text15" class="abs-text">
-          Government credit guarantees for bank loans direct vast volumes of credit and are the main policy tool used to improve firms' access to credit. This paper examines Chile’s credit guarantee scheme, which is similar to that of many OECD countries. Using a regression discontinuity design around the eligibility cutoff we find that guarantees more than double firms' borrowing without detectable increases in default rates. We also show that banks use guarantees to build new borrower relationships, an important and poorly understood process. The scheme also has an amplification effect: firms increase borrowing from other banks following a guarantee. Finally, we show that firms use the credit increase to significantly scale up their sales and employment. The fact that guarantees are not a common pool resource in this policy design is critical to understanding these results.
-        </span>
-      </p>
-    </main>
-    <!-- End Permanent Working Papers -->
+      </div>
+      <div class="abstract-body">
+        Government credit guarantees for bank loans direct vast volumes of credit and are the main policy tool used to improve firms' access to credit. This paper examines Chile's credit guarantee scheme, which is similar to that of many OECD countries. Using a regression discontinuity design around the eligibility cutoff we find that guarantees more than double firms' borrowing without detectable increases in default rates. We also show that banks use guarantees to build new borrower relationships, an important and poorly understood process. The scheme also has an amplification effect: firms increase borrowing from other banks following a guarantee. Finally, we show that firms use the credit increase to significantly scale up their sales and employment. The fact that guarantees are not a common pool resource in this policy design is critical to understanding these results.
+      </div>
+    </div>
 
-    <!-- The Governance Impact (not submitted) -->
-    <main>
-      <p>
-        <a
-          class="title"
-          target="_blank"
-          href="https://drive.google.com/file/d/1oLjf9LXV-awg3ItLdweVL69MnozTWYXF/view"
-          >The Governance Impact of Indexing: Evidence from Regression Discontinuity</a>
-      </p>
-      <p class="text">
-        (never submitted due to inertia)
-        &nbsp;&nbsp;
-      </p>
-    </main>
+    <!-- Governance Impact -->
+    <div class="paper">
+      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1oLjf9LXV-awg3ItLdweVL69MnozTWYXF/view">
+        The Governance Impact of Indexing: Evidence from Regression Discontinuity
+      </a>
+      <div class="paper-meta">
+        <span class="never-sub">Never submitted due to inertia</span>
+      </div>
+    </div>
 
-    <br>
 
-    <!-- Case Studies -->
-    <main>
-      <h3 style="margin-top: 20px">Case Studies</h3>
+  </main>
 
-      <!-- Case Study: Unrest in Chile -->
-      <p class="title">
-        Unrest in Chile -
-        <span>
-          <a
-            href="https://www.hbs.edu/faculty/Pages/item.aspx?num=59220"
-            target="_blank"
-          >
-            HBS Case Study (2020, rev. 2023)</a>
-        </span>
-      </p>
-      <p class="text">
-        &nbsp;&nbsp;
-        <button onclick="openAbstract(16)" id="btn16" class="special-link btn">
-          Abstract
-        </button>
-        <br />
-        <span id="abs-text16" class="abs-text">
-          In 2020, Chileans would head to the ballot box to decide their country’s future. Many international observers credited Chile’s decades of neoliberal governance with turning the country into Latin America’s “Tiger,” a prosperous, diversified economy on its way to becoming the continent’s first developed country. But in October of 2019, a mass protest movement ground the country to a halt and shocked its political class, showing the world a different Chile—one defined by inequality, social distrust, and a young generation of political activists. As Chile prepared to vote in the fall of 2020 on whether to adopt a new constitution, could it sculpt a more equitable society while remaining “the exception” on a continent known for its political instability? Or would Chile’s prosperity go the same way as its neoliberal experiment?
-        </span>
-      </p>
+  <script>
+    function toggleAbstract(btn) {
+      const paper = btn.closest('.paper');
+      const abstract = paper.querySelector('.abstract-body');
+      const isOpen = abstract.classList.contains('open');
+      abstract.classList.toggle('open', !isOpen);
+      btn.classList.toggle('open', !isOpen);
+    }
+  </script>
 
-      <!-- Case Study: Walmart Chile After the Unrest -->
-      <p class="title last">
-        Walmart Chile After the Unrest: Doubling Down or Pulling Out? -
-        <span>
-          <a
-            href="https://www.hbs.edu/faculty/Pages/item.aspx?num=59967"
-            target="_blank"
-          >
-            HBS Case Study (2021, rev. 2022)</a>
-        </span>
-      </p>
-    </main>
-    <script src="./js/index.js"></script>
-  </body>
+</body>
 </html>

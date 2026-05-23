@@ -1,0 +1,53 @@
+# William Mullins
+
+> Associate Professor of Finance at the Rady School of Management, UC San Diego. Research in behavioral finance, social media and finance, the political economy of household finance, and entrepreneurship.
+
+Contact: wmullins@ucsd.edu
+Website: https://willmullins.net
+Google Scholar: https://scholar.google.com/citations?user=wZ6rd18AAAAJ
+CV: https://drive.google.com/file/d/1VK5cnI-iITBgYWflyEq7GVO_EskBGduT/view
+
+## Research Areas
+
+- **Social media in finance**: How investor social media shapes beliefs, attention, and trading. Papers include "Does Partisanship Shape Investor Beliefs?" (RAPS 2020), "Echo Chambers" (RFS 2023), "The Social Signal" (JFE 2024), "Social Media and Finance" (review article, 2024), "Market Signals from Social Media" (working paper), and "Celebrity Persuasion" (working paper).
+- **Partisan economic behavior**: How political identity shapes household, investor, and entrepreneurial decisions. Papers include "Does Partisanship Shape Investor Beliefs?" (RAPS 2020), "Partisan Fertility" (AERI 2022), "Partisan Entrepreneurship" (JF 2026), "Political Sentiment and Innovation" (RFS 2025), "Cross-State Strategic Voting" (AEJ:EP 2026), and "Dissecting Racial Politicization" (working paper).
+
+## Working Papers
+
+- [Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4737232): With Carlos Avenancio-Leon and Troup Howard. Uses the county-level rollout of Food Stamps in the 1960s–70s and voter microdata for 175M Americans to identify the long-run political effects of safety-net expansion. Exposure as an adult induces persistent racial polarization (White voters more Republican, Black voters more Democrat) that lasts at least 50 years.
+
+- [Celebrity Persuasion](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5310337): With Matteo Benetton, Marina Niessner, and Jan Toczynski. Uses survey, market, and transaction-level data to measure the persuasion rates of celebrity cryptocurrency endorsements on Twitter. Celebrity tweets increase individual investment by 14% (more for first-time investors) and trading volume by 11%; the representative retail follower loses money after transaction costs.
+
+- [Entity Neutering](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5182756): With Joey Engelberg, Asaf Manela, and Luka Vulicevic. Proposes a method to remove identifying information from text — using an LLM agent that iteratively masks entities and paraphrases — so that researchers can use modern LLMs on historical text without look-ahead bias. After neutering over 500,000 financial news articles, ChatGPT identifies the subject firm at chance, while sentiment is >90% preserved. Also demonstrates the method on MD&As and earnings call transcripts.
+
+- [Market Signals from Social Media](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187350): With Tony Cookson, Runjing Lu, and Marina Niessner. Builds daily market-wide sentiment and attention indexes from millions of investor social-media posts. Sentiment extrapolates from past returns and reverses; attention predicts continuation of negative returns. The two indexes spread through different channels and have distinct effects on aggregate trading.
+
+- [Immigration and Credit in America](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062): With Tony Cookson and Benedict Guttman-Kenney. Studies how immigrants assimilate into U.S. consumer credit markets. Immigrants are positively selected on creditworthiness (credit scores 27 points above non-immigrants by age 30) but persistently less likely to hold auto loans or mortgages, with gaps lasting over a decade after arrival.
+
+## Publications
+
+- [Cross-State Strategic Voting](https://doi.org/10.1257/pol.20240630): American Economic Journal: Economic Policy, 2026. With Gordon Dahl, Joey Engelberg, and Runjing Lu. Documents that 3.1% of US voters (~6.1M people) were registered in two states in 2020 and disproportionately voted in swing states and in states with automatic mail-in ballots — the first paper to study strategic choice of where to vote.
+
+- [Political Sentiment and Innovation: Evidence from Patenters](https://doi.org/10.1093/rfs/hhaf029): Review of Financial Studies, 2025. With Joey Engelberg, Runjing Lu, and Rick Townsend. Shows that US inventors' patenting tracks the partisan alignment of the federal administration: Democratic inventors patent more after Obama 2008 and less after Trump 2016, with twice as large effects for politically active partisans. Effects survive within firm × technology.
+
+- [Partisan Entrepreneurship](https://doi.org/10.1111/jofi.70042): Journal of Finance, 2026. With Joseph Engelberg, Jorge Guzman, and Runjing Lu. Uses 40M party-identified Americans to show Republicans start more firms than Democrats and that the gap moves with political control: Republicans relatively increase entrepreneurship under Republican administrations, generating an ~170,000-firm reallocation across the 2005–2017 sample. Awards: MFA Best Paper in Corporate Finance (2022); Colorado Finance Summit Best Paper (2021).
+
+- [Social Media and Finance](https://doi.org/10.1093/acrefore/9780190625979.013.957): Oxford Research Encyclopedia of Economics and Finance, 2024. With Tony Cookson and Marina Niessner. Review article surveying the financial social-media literature and data landscape.
+
+- [The Social Signal](https://doi.org/10.1016/j.jfineco.2024.103870): Journal of Financial Economics, 2024. With Tony Cookson, Runjing Lu, and Marina Niessner. Compares attention and sentiment across Twitter, StockTwits, and Seeking Alpha. Attention correlates strongly across platforms, sentiment does not, and they have opposite return predictions: sentiment predicts positive next-day returns, attention predicts negative ones. JFE Editor's Choice; MFA Best Paper in Investments and Asset Pricing (2023).
+
+- [Unconventional Monetary Policy Transmission and Bank Lending Relationships](https://doi.org/10.1287/mnsc.2022.01871): Management Science, 2024. With Anne Duquerroy and Christophe Cahn. Uses the ECB's VLTRO program to show that monetary stimulus is transmitted selectively to single-bank firms (the majority of firms in most economies) via banks' lending standards, while multi-bank firms receive uniform transmission. Colorado Finance Summit Best Paper.
+
+- [Echo Chambers](https://doi.org/10.1093/rfs/hhac058): Review of Financial Studies, 2023. With Tony Cookson and Joey Engelberg. Documents selective exposure on the investor network StockTwits: self-described bulls are 5× more likely to follow other bulls on a given stock than to follow bears. Generates large differences in users' newsfeeds and is positively related to trading volume. WFA Best Paper in Asset Pricing (2021); MFA Best Paper in Markets and Trading (2021); CQA First Prize (2021); Kahle Award (UC Boulder, 2024).
+
+- [Partisan Fertility and Presidential Elections](https://doi.org/10.1257/aeri.20210485): American Economic Review: Insights, 2022. With Gordon Dahl and Runjing Lu. Identifies effects of political-power shifts on fertility using the 2016 Trump election. Republican counties see a 0.7–1.4% relative increase in annual births; Hispanic fertility falls sharply, especially after pre-election Trump campaign visits.
+
+- [Does Partisanship Shape Investor Beliefs? Evidence from the COVID-19 Pandemic](https://doi.org/10.1093/rapstu/raaa018): Review of Asset Pricing Studies, 2020. With Tony Cookson and Joey Engelberg. Uses party-identifying language on StockTwits to identify Republican investors and shows their COVID-era beliefs about equities remained relatively optimistic. Partisan disagreement explains 28% of the pandemic-era rise in stock turnover.
+
+- [How do CEOs see their roles? Management Philosophies and Styles in Family and non-Family Firms](https://doi.org/10.1016/j.jfineco.2015.08.011): Journal of Financial Economics, 2016. With Antoinette Schoar. Surveys 800 CEOs in 22 emerging economies and shows family-firm CEOs are more stakeholder-oriented and hierarchical, while non-family CEOs emphasize shareholder value. Firm-level ownership variation matters as much as country or industry differences.
+
+## Permanent Working Papers
+
+- [Credit Guarantees and New Bank Relationships](https://drive.google.com/file/d/1AfOQ4Y6hqRntO89UCyIX_d1PHJg_mxfK/view): With Patricio Toro. Uses a regression-discontinuity design around Chile's credit-guarantee eligibility cutoff to show guarantees more than double borrowing without raising defaults, and that banks use them to build new lending relationships. Effects amplify into borrowing from other banks and into firm-level employment and sales.
+
+- [The Governance Impact of Indexing: Evidence from Regression Discontinuity](https://drive.google.com/file/d/1oLjf9LXV-awg3ItLdweVL69MnozTWYXF/view): Never submitted due to inertia.
