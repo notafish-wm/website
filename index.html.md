@@ -59,7 +59,7 @@ With Tony Cookson and Benedict Guttman-Kenney.
 
 *American Economic Journal: Economic Policy*, 2026.
 With Gordon Dahl, Joey Engelberg, and Runjing Lu.
-[Paper](https://drive.google.com/file/d/1_hccfk8or4322_uz36OUQDhKKv7Jj3Zz/view) · [DOI](https://doi.org/10.1257/pol.20240630) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4354261) · [VoxEU](https://cepr.org/voxeu/columns/double-registration-and-strategic-voting-across-state-lines)
+[Paper](https://willmullins.net/papers/CSSV_SSRN.pdf) · [DOI](https://doi.org/10.1257/pol.20240630) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4354261) · [VoxEU](https://cepr.org/voxeu/columns/double-registration-and-strategic-voting-across-state-lines)
 
 > We estimate that 3.1% of US voters, or 6.1 million individuals, were registered to vote in two states in 2020, opening up the possibility for them to choose where to vote. Double registrants are concentrated in the wealthiest zipcodes and respond to both incentives and costs, disproportionately choosing to vote in swing states (higher incentive) and states which automatically send out mail-in ballots (lower cost). We call this behavior Cross-State Strategic Voting. While others have documented strategic incentives on who to vote for, this paper is the first to consider strategic incentives on where to vote.
 
@@ -67,7 +67,7 @@ With Gordon Dahl, Joey Engelberg, and Runjing Lu.
 
 *Review of Financial Studies*, 2025.
 With Joey Engelberg, Runjing Lu, and Rick Townsend.
-[Paper](https://drive.google.com/file/d/17Jsj5YdF-DsXPVZuJDyRYRFSjfOp6tb2/view) · [DOI](https://doi.org/10.1093/rfs/hhaf029) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4176649)
+[Paper](https://willmullins.net/papers/Partisan_Inventors_SSRN.pdf) · [DOI](https://doi.org/10.1093/rfs/hhaf029) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4176649)
 
 > We document political sentiment effects on U.S. inventors. Democratic inventors are more likely to patent (relative to Republicans) after the 2008 election of Obama but less likely after the 2016 election of Trump. These effects are at least twice as strong among politically active Democrats and are present even within firms and within firm × technology. We also show that partisans tend to cluster in technologies (e.g., Democrats in Biotechnology and Republicans in Weapons), so that sentiment effects aggregate up to more patents in the technologies dominated by the winning party.
 
@@ -75,7 +75,7 @@ With Joey Engelberg, Runjing Lu, and Rick Townsend.
 
 *Journal of Finance*, 2026.
 With Joseph Engelberg, Jorge Guzman, and Runjing Lu.
-[Paper](https://drive.google.com/file/d/1z6uEN3i2O1UsoDB6hq7kJFijLz3-vBMk/view) · [DOI](https://doi.org/10.1111/jofi.70042) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3821106) · [SocArXiv](https://osf.io/preprints/socarxiv/qhs6j)
+[Paper](https://willmullins.net/papers/Partisan_Entrepreneurship_JF.pdf) · [DOI](https://doi.org/10.1111/jofi.70042) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3821106) · [SocArXiv](https://osf.io/preprints/socarxiv/qhs6j)
 
 > Republicans start more firms than Democrats. In a sample of 40 million party-identified Americans between 2005 and 2017, we find that 5.5% of Republicans and 3.7% of Democrats become entrepreneurs. This partisan entrepreneurship gap is time-varying: Republicans increase their relative entrepreneurship during Republican administrations and decrease it during Democratic administrations, amounting to a partisan reallocation of 170,000 new firms over our 13-year sample. We find sharp changes in partisan entrepreneurship around the elections of President Obama and President Trump, and the strongest effects among the most politically active partisans: those that donate and vote.
 
@@ -87,7 +87,7 @@ Awards:
 
 *Oxford Research Encyclopedia of Economics and Finance*, 2024.
 With Tony Cookson and Marina Niessner.
-[Paper](https://drive.google.com/file/d/1fntlJTGwL9aRY-sJPmjPkblz2__6jk12/view) · [DOI](https://doi.org/10.1093/acrefore/9780190625979.013.957) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4806692)
+[Paper](https://willmullins.net/papers/Social_Media_%26_Finance_Chapter.pdf) · [DOI](https://doi.org/10.1093/acrefore/9780190625979.013.957) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4806692)
 
 > Social media has become an integral part of the financial information environment, changing the way financial information is produced, consumed and distributed. This article surveys the financial social media literature, distinguishing between research using social media as a lens to shed light on more general financial behavior and research exploring the effects of social media on financial markets. We also review the social media data landscape.
 
@@ -95,7 +95,7 @@ With Tony Cookson and Marina Niessner.
 
 *Journal of Financial Economics*, 2024.
 With Tony Cookson, Runjing Lu, and Marina Niessner.
-[Paper](https://drive.google.com/file/d/1RQZf0oL63wc6LXwDUdIeKHbH52JmxIGP/view) · [DOI](https://doi.org/10.1016/j.jfineco.2024.103870) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241505) · [Data](https://data.mendeley.com/datasets/xffyybvw4j/1)
+[Paper](https://willmullins.net/papers/Social_Signal_SSRN.pdf) · [DOI](https://doi.org/10.1016/j.jfineco.2024.103870) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241505) · [Data](https://data.mendeley.com/datasets/xffyybvw4j/1)
 
 > We examine social media attention and sentiment from three major platforms: Twitter, StockTwits, and Seeking Alpha. We find that, even after controlling for firm disclosures and news, attention is highly correlated across platforms, but sentiment is not: its first principal component explains little more variation than purely idiosyncratic sentiment. Using market events, we attribute differences across platforms to differences in users (e.g., professionals versus novices) and differences in platform design (e.g., character limits in posts). We also find that sentiment and attention contain different return-relevant information. Sentiment predicts positive next-day returns, but attention predicts negative next-day returns. These results highlight the importance of considering both social media sentiment and attention, and of distinguishing between different investor social media platforms.
 
@@ -108,7 +108,7 @@ Awards:
 
 *Management Science*, 2024.
 With Anne Duquerroy and Christophe Cahn.
-[Paper](https://drive.google.com/file/d/1xep-gUkvsexVCpWmw3NYOQNBNYv92VI-/view) · [DOI](https://doi.org/10.1287/mnsc.2022.01871) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2970199) · [SocArXiv](https://osf.io/preprints/socarxiv/vgk25/)
+[Paper](https://willmullins.net/papers/UnconMP_SSRN.pdf) · [DOI](https://doi.org/10.1287/mnsc.2022.01871) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2970199) · [SocArXiv](https://osf.io/preprints/socarxiv/vgk25/)
 
 > Firms with only one bank relationship make up the majority of firms in many economies. This paper explores whether policy-driven lending is differentially transmitted to single-bank firms in comparison with the multibank firms that are the focus of the literature. Using unique variation in the ECB's very long-term refinancing operations (VLTROs), which affected lending to firms discontinuously across credit ratings but within banks, we find selective transmission of VLTRO liquidity to single-bank firms. Banks apply higher lending standards to single-bank firms, with banking relationships determining both new lending and lending maturity. By contrast, banks appear to transmit policy lending near-uniformly across multibank firms.
 
