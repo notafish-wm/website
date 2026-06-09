@@ -16,6 +16,13 @@ Rady School of Management, UC San Diego
 
 ## Working Papers
 
+### Giving Users What They Want: Social Media and Anomalies
+
+With Joseph Engelberg, Byoung-Hyoun Hwang, and Runjing Lu.
+[Paper](https://drive.google.com/file/d/1UtCtcVAyZ_B6wlRsTp4Eay3ZEuOmFNTx/view?usp=drive_link) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6908458)
+
+> Using StockTwits data from 2010 to 2024, we show that stocks in the "short leg" of over 200 return anomalies attract substantially more posts and more bullish sentiment than stocks in the corresponding "long leg." The differences are large: a user is around five times more likely to encounter a bullish post about a short-leg stock than about a long-leg stock. User engagement patterns point to a demand-driven explanation: bullish posts about short-leg stocks receive more likes and generate greater follower growth for their authors. Because content creators value likes and followers, this creates an incentive to amplify optimistic narratives about stocks with low expected returns.
+
 ### Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program
 
 With Carlos Avenancio-Leon and Troup Howard.

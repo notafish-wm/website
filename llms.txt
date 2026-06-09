@@ -9,10 +9,12 @@ CV: https://drive.google.com/file/d/1VK5cnI-iITBgYWflyEq7GVO_EskBGduT/view
 
 ## Research Areas
 
-- **Social media in finance**: How investor social media shapes beliefs, attention, and trading. Papers include "Does Partisanship Shape Investor Beliefs?" (RAPS 2020), "Echo Chambers" (RFS 2023), "The Social Signal" (JFE 2024), "Social Media and Finance" (review article, 2024), "Market Signals from Social Media" (working paper), and "Celebrity Persuasion" (working paper).
+- **Social media in finance**: How investor social media shapes beliefs, attention, and trading. Papers include "Does Partisanship Shape Investor Beliefs?" (RAPS 2020), "Echo Chambers" (RFS 2023), "The Social Signal" (JFE 2024), "Social Media and Finance" (review article, 2024), "Market Signals from Social Media" (working paper), "Celebrity Persuasion" (working paper), and "Giving Users What They Want: Social Media and Anomalies" (working paper).
 - **Partisan economic behavior**: How political identity shapes household, investor, and entrepreneurial decisions. Papers include "Does Partisanship Shape Investor Beliefs?" (RAPS 2020), "Partisan Fertility" (AERI 2022), "Partisan Entrepreneurship" (JF 2026), "Political Sentiment and Innovation" (RFS 2025), "Cross-State Strategic Voting" (AEJ:EP 2026), and "Dissecting Racial Politicization" (working paper).
 
 ## Working Papers
+
+- [Giving Users What They Want: Social Media and Anomalies](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6908458): With Joseph Engelberg, Byoung-Hyoun Hwang, and Runjing Lu. Using StockTwits data from 2010 to 2024, shows that stocks in the "short leg" of 200+ return anomalies attract roughly 5× more posts and more bullish sentiment than long-leg stocks. The pattern is demand-driven: bullish posts about short-leg stocks earn more likes and generate more follower growth, creating an incentive for content creators to amplify optimistic narratives about low-expected-return stocks.
 
 - [Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4737232): With Carlos Avenancio-Leon and Troup Howard. Uses the county-level rollout of Food Stamps in the 1960s–70s and voter microdata for 175M Americans to identify the long-run political effects of safety-net expansion. Exposure as an adult induces persistent racial polarization (White voters more Republican, Black voters more Democrat) that lasts at least 50 years.
 
