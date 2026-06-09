@@ -155,12 +155,31 @@
     .paper-title {
       font-family: var(--serif);
       font-size: 1.05rem;
-      color: var(--link);
-      text-decoration: none;
+      color: var(--accent);
       line-height: 1.4;
     }
 
-    .paper-title:hover { color: var(--link-hover); text-decoration: underline; }
+    /* Inline pdf link inside the title: small boxed sans-serif badge */
+    .paper-title .supp-link {
+      font-family: var(--body-font);
+      font-size: 0.78rem;
+      padding: 0.05rem 0.4rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--link);
+      vertical-align: 0.15em;
+      white-space: nowrap;
+    }
+    .paper-title .supp-link:hover {
+      border-color: var(--accent);
+      color: var(--link-hover);
+      text-decoration: none;
+      background: var(--light);
+    }
+
+    /* Collapsible appendices reveal — children flow back into the flex row when open */
+    .appendices-links { display: none; }
+    .appendices-links.open { display: contents; }
 
     .paper-venue {
       font-size: 0.9rem;
@@ -361,9 +380,7 @@
 
     <!-- Dissecting Racial Politicization -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1DRrWiRiuzqrixOhLyRA9JOQeYF8so3DJ/view?usp=sharing">
-        Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program
-      </a>
+      <div class="paper-title">Dissecting Racial Politicization: Long-Run Evidence from the Food Stamp Program&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1DRrWiRiuzqrixOhLyRA9JOQeYF8so3DJ/view?usp=sharing">pdf</a></div>
       <div class="paper-meta">
         <span>With
           <a class="coauthor" href="https://www.avenancioleon.com" target="_blank" rel="noopener noreferrer">Carlos Avenancio-Leon</a>
@@ -382,9 +399,7 @@
 
     <!-- Celebrity Persuasion -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1_iGLWU81KQlmB7LzruK3xuNvsJ3A_egV/view?usp=sharing">
-        Celebrity Persuasion
-      </a>
+      <div class="paper-title">Celebrity Persuasion&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1_iGLWU81KQlmB7LzruK3xuNvsJ3A_egV/view?usp=sharing">pdf</a></div>
       <div class="paper-meta">
         <span>With
           <a class="coauthor" href="https://sites.google.com/view/matteobenetton/home" target="_blank" rel="noopener noreferrer">Matteo Benetton</a>,
@@ -404,9 +419,7 @@
 
     <!-- Entity Neutering -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1JRQ2iMVC9meyOirYlaDoefzGyEilewGd/view?usp=sharing">
-        Entity Neutering<span class="updated-tag">Updated January 2026</span>
-      </a>
+      <div class="paper-title">Entity Neutering<span class="updated-tag">Updated January 2026</span>&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1JRQ2iMVC9meyOirYlaDoefzGyEilewGd/view?usp=sharing">pdf</a></div>
       <div class="paper-meta">
         <span>With
           <a class="coauthor" href="https://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/research.htm" target="_blank" rel="noopener noreferrer">Joey Engelberg</a>,
@@ -426,9 +439,7 @@
 
     <!-- Market Signals from Social Media -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1dGrrHaW0D5tTX7IC9Ygwh7UDjFPOAlAr/view?usp=sharing">
-        Market Signals from Social Media
-      </a>
+      <div class="paper-title">Market Signals from Social Media&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1dGrrHaW0D5tTX7IC9Ygwh7UDjFPOAlAr/view?usp=sharing">pdf</a></div>
       <div class="paper-meta">
         <span>With
           <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>,
@@ -448,9 +459,7 @@
 
     <!-- Immigration and Credit -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1yr-qm1zBX_s_q6u2dxtpHkFYmXmEMWql/view?usp=sharing">
-        Immigration and Credit in America
-      </a>
+      <div class="paper-title">Immigration and Credit in America&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1yr-qm1zBX_s_q6u2dxtpHkFYmXmEMWql/view?usp=sharing">pdf</a></div>
       <div class="paper-meta">
         <span>With
           <a class="coauthor" href="https://www.tonycookson.com/" target="_blank" rel="noopener noreferrer">Tony Cookson</a>
@@ -472,9 +481,7 @@
 
     <!-- 9. Cross-State Strategic Voting -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1_hccfk8or4322_uz36OUQDhKKv7Jj3Zz/view">
-        9. Cross-State Strategic Voting
-      </a>
+      <div class="paper-title">9. Cross-State Strategic Voting&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1_hccfk8or4322_uz36OUQDhKKv7Jj3Zz/view">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1257/pol.20240630" target="_blank" rel="noopener noreferrer"><em>American Economic Journal: Economic Policy</em></a>, 2026
       </div>
@@ -498,9 +505,7 @@
 
     <!-- 8. Political Sentiment and Innovation -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17Jsj5YdF-DsXPVZuJDyRYRFSjfOp6tb2/view">
-        8. Political Sentiment and Innovation: Evidence from Patenters
-      </a>
+      <div class="paper-title">8. Political Sentiment and Innovation: Evidence from Patenters&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17Jsj5YdF-DsXPVZuJDyRYRFSjfOp6tb2/view">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1093/rfs/hhaf029" target="_blank" rel="noopener noreferrer"><em>Review of Financial Studies</em></a>, 2025
       </div>
@@ -523,9 +528,7 @@
 
     <!-- 7. Partisan Entrepreneurship -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1z6uEN3i2O1UsoDB6hq7kJFijLz3-vBMk/view">
-        7. Partisan Entrepreneurship
-      </a>
+      <div class="paper-title">7. Partisan Entrepreneurship&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1z6uEN3i2O1UsoDB6hq7kJFijLz3-vBMk/view">pdf</a></div>
       <div class="paper-venue"><a href="https://doi.org/10.1111/jofi.70042" target="_blank" rel="noopener noreferrer"><em>Journal of Finance</em></a>, 2026</div>
       <div class="paper-meta">
         <span>With
@@ -551,9 +554,7 @@
 
     <!-- *. Social Media and Finance (review) -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1fntlJTGwL9aRY-sJPmjPkblz2__6jk12/view?usp=sharing">
-        *. Social Media and Finance (review article)
-      </a>
+      <div class="paper-title">*. Social Media and Finance (review article)&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1fntlJTGwL9aRY-sJPmjPkblz2__6jk12/view?usp=sharing">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1093/acrefore/9780190625979.013.957" target="_blank" rel="noopener noreferrer"><em>Oxford Research Encyclopedia of Economics and Finance</em></a>, 2024
       </div>
@@ -575,9 +576,7 @@
 
     <!-- 6. The Social Signal -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1RQZf0oL63wc6LXwDUdIeKHbH52JmxIGP/view?usp=sharing">
-        6. The Social Signal
-      </a>
+      <div class="paper-title">6. The Social Signal&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1RQZf0oL63wc6LXwDUdIeKHbH52JmxIGP/view?usp=sharing">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1016/j.jfineco.2024.103870" target="_blank" rel="noopener noreferrer"><em>Journal of Financial Economics</em></a>, 2024
       </div>
@@ -606,9 +605,7 @@
 
     <!-- 5. Unconventional Monetary Policy Transmission -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1xep-gUkvsexVCpWmw3NYOQNBNYv92VI-/view?usp=sharing">
-        5. Unconventional Monetary Policy Transmission and Bank Lending Relationships
-      </a>
+      <div class="paper-title">5. Unconventional Monetary Policy Transmission and Bank Lending Relationships&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1xep-gUkvsexVCpWmw3NYOQNBNYv92VI-/view?usp=sharing">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1287/mnsc.2022.01871" target="_blank" rel="noopener noreferrer"><em>Management Science</em></a>, 2024
       </div>
@@ -634,9 +631,7 @@
 
     <!-- 4. Echo Chambers -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Echo_public_Feb2022.pdf" download="Echo_public_Feb2022.pdf">
-        4. Echo Chambers
-      </a>
+      <div class="paper-title">4. Echo Chambers&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/Echo_public_Feb2022.pdf" download="Echo_public_Feb2022.pdf">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1093/rfs/hhac058" target="_blank" rel="noopener noreferrer"><em>Review of Financial Studies</em></a>, 2023
       </div>
@@ -667,9 +662,7 @@
 
     <!-- 3. Partisan Fertility -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Partisan Fertility_Dec2021.pdf" download="Partisan Fertility_Dec2021.pdf">
-        3. Partisan Fertility and Presidential Elections
-      </a>
+      <div class="paper-title">3. Partisan Fertility and Presidential Elections&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/Partisan Fertility_Dec2021.pdf" download="Partisan Fertility_Dec2021.pdf">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1257/aeri.20210485" target="_blank" rel="noopener noreferrer"><em>American Economic Review: Insights</em></a>, 2022
       </div>
@@ -695,9 +688,7 @@
 
     <!-- 2. Does Partisanship Shape Investor Beliefs? -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Political_covid_SSRNfinal.pdf" download="Political_covid_SSRNfinal.pdf">
-        2. Does Partisanship Shape Investor Beliefs? Evidence from the COVID-19 Pandemic
-      </a>
+      <div class="paper-title">2. Does Partisanship Shape Investor Beliefs? Evidence from the COVID-19 Pandemic&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/Political_covid_SSRNfinal.pdf" download="Political_covid_SSRNfinal.pdf">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1093/rapstu/raaa018" target="_blank" rel="noopener noreferrer"><em>Review of Asset Pricing Studies</em></a>, 2020
       </div>
@@ -721,9 +712,7 @@
 
     <!-- 1. Management Philosophies -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="./papers/Mgmt_philosophy_jfe.pdf" download="Mgmt_philosophy_jfe.pdf">
-        1. How do CEOs see their roles? Management Philosophies and Styles in Family and non-Family Firms
-      </a>
+      <div class="paper-title">1. How do CEOs see their roles? Management Philosophies and Styles in Family and non-Family Firms&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/Mgmt_philosophy_jfe.pdf" download="Mgmt_philosophy_jfe.pdf">pdf</a></div>
       <div class="paper-venue">
         <a href="https://doi.org/10.1016/j.jfineco.2015.08.011" target="_blank" rel="noopener noreferrer"><em>Journal of Financial Economics</em></a>, 2016
       </div>
@@ -733,9 +722,14 @@
         </span>
         <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2668267">SSRN</a>
         <a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://corpgov.law.harvard.edu/2015/11/22/management-philosophies-and-styles-in-family-and-non-family-firms/#more-71976">Non-technical summary</a>
-        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_final_Appendix 1.pdf" download="jfe140741_final_Appendix 1.pdf">Appendix 1</a>
-        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_final_Survey Appendix.pdf" download="jfe140741_final_Survey Appendix.pdf">Survey Appendix</a>
-        <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_Appendix 2 (web only).xlsx" download="jfe140741_Appendix 2 (web only).xlsx">Appendix 2</a>
+        <button class="abstract-toggle" onclick="toggleAppendices(this)">
+          <span class="toggle-icon">+</span> Appendices
+        </button>
+        <span class="appendices-links">
+          <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_final_Appendix 1.pdf" download="jfe140741_final_Appendix 1.pdf">Appendix 1</a>
+          <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_final_Survey Appendix.pdf" download="jfe140741_final_Survey Appendix.pdf">Survey Appendix</a>
+          <a class="supp-link" target="_blank" rel="noopener noreferrer" href="./papers/jfe140741_Appendix 2 (web only).xlsx" download="jfe140741_Appendix 2 (web only).xlsx">Appendix 2</a>
+        </span>
         <button class="abstract-toggle" onclick="toggleAbstract(this)">
           <span class="toggle-icon">+</span> Abstract
         </button>
@@ -750,9 +744,7 @@
 
     <!-- Credit Guarantees -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1AfOQ4Y6hqRntO89UCyIX_d1PHJg_mxfK/view">
-        Credit Guarantees and New Bank Relationships
-      </a>
+      <div class="paper-title">Credit Guarantees and New Bank Relationships&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1AfOQ4Y6hqRntO89UCyIX_d1PHJg_mxfK/view">pdf</a></div>
       <div class="paper-meta">
         <span>With Patricio Toro</span>
         <button class="abstract-toggle" onclick="toggleAbstract(this)">
@@ -766,11 +758,9 @@
 
     <!-- Governance Impact -->
     <div class="paper">
-      <a class="paper-title" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1oLjf9LXV-awg3ItLdweVL69MnozTWYXF/view">
-        The Governance Impact of Indexing: Evidence from Regression Discontinuity
-      </a>
+      <div class="paper-title">The Governance Impact of Indexing: Evidence from Regression Discontinuity&nbsp;&nbsp;&nbsp;<a class="supp-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1oLjf9LXV-awg3ItLdweVL69MnozTWYXF/view">pdf</a></div>
       <div class="paper-meta">
-        <span class="never-sub">Never submitted due to inertia</span>
+        <span class="never-sub">Never submitted</span>
       </div>
     </div>
 
@@ -783,6 +773,13 @@
       const abstract = paper.querySelector('.abstract-body');
       const isOpen = abstract.classList.contains('open');
       abstract.classList.toggle('open', !isOpen);
+      btn.classList.toggle('open', !isOpen);
+    }
+
+    function toggleAppendices(btn) {
+      const links = btn.parentElement.querySelector('.appendices-links');
+      const isOpen = links.classList.contains('open');
+      links.classList.toggle('open', !isOpen);
       btn.classList.toggle('open', !isOpen);
     }
   </script>
