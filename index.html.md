@@ -126,7 +126,7 @@ Awards:
 
 *Review of Financial Studies*, 2023.
 With Tony Cookson and Joey Engelberg.
-[Paper](https://willmullins.net/papers/Echo_SSRN.pdf) · [DOI](https://doi.org/10.1093/rfs/hhac058) · [MD](https://willmullins.net/papers/echo-chambers.md) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3603107) · [SocArXiv](https://osf.io/preprints/socarxiv/n2q9h/) · [Slides](https://drive.google.com/file/d/1ZW4yVQdlwd2fXzP4X_8rpz1Nv_hotg0O/view)
+[Paper](https://willmullins.net/papers/Echo_SSRN.pdf) · [DOI](https://doi.org/10.1093/rfs/hhac058) · [MD](https://willmullins.net/papers/Echo_SSRN.md) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3603107) · [SocArXiv](https://osf.io/preprints/socarxiv/n2q9h/) · [Slides](https://drive.google.com/file/d/1ZW4yVQdlwd2fXzP4X_8rpz1Nv_hotg0O/view)
 
 > We find evidence of selective exposure to confirmatory information among 300,000 users on the investor social network StockTwits. Self-described bulls are 5 times more likely to follow a user with a bullish view of the same stock than self-described bears. This tendency is strong even among professional investors and is more pronounced on earnings announcement days. Placing oneself in an information "echo chamber" generates significant differences in the newsfeeds of bulls and bears: over a 50-day period, a bull will see 70 more bullish messages and 15 fewer bearish messages than a bear over the same period. Selective exposure creates "information silos" in which the diversity of received signals is high across users' newsfeeds but is low within users' newsfeeds. Finally, we show that this siloing of information is positively related to trading volume.
 
@@ -140,7 +140,7 @@ Awards:
 
 *American Economic Review: Insights*, 2022.
 With Gordon Dahl and Runjing Lu.
-[Paper](https://willmullins.net/papers/Partisan%20Fertility_SSRN.pdf) · [DOI](https://doi.org/10.1257/aeri.20210485) · [MD](https://willmullins.net/papers/partisan-fertility.md) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3822013) · [NBER WP](https://www.nber.org/papers/w29058)
+[Paper](https://willmullins.net/papers/Partisan_Fertility_SSRN.pdf) · [DOI](https://doi.org/10.1257/aeri.20210485) · [MD](https://willmullins.net/papers/Partisan_Fertility_SSRN.md) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3822013) · [NBER WP](https://www.nber.org/papers/w29058)
 
 > Changes in political leadership drive large changes in economic optimism. We exploit the surprise 2016 election of Trump to identify the effects of a shift in political power on one of the most consequential household decisions: whether to have a child. Republican-leaning counties experience a sharp and persistent increase in fertility relative to Democratic counties: a 0.7 to 1.4% increase in annual births, depending on the intensity of partisanship. Hispanics, a group targeted by Trump, see fertility fall relative to non-Hispanics, especially compared to rural or evangelical whites. Further, following Trump pre-election campaign visits, relative Hispanic fertility declines.
 
@@ -148,7 +148,7 @@ With Gordon Dahl and Runjing Lu.
 
 *Review of Asset Pricing Studies*, 2020.
 With Tony Cookson and Joey Engelberg.
-[Paper](https://willmullins.net/papers/Beliefs_COVID_SSRN.pdf) · [DOI](https://doi.org/10.1093/rapstu/raaa018) · [MD](https://willmullins.net/papers/Beliefs_COVID.md) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3621067)
+[Paper](https://willmullins.net/papers/Beliefs_COVID_SSRN.pdf) · [DOI](https://doi.org/10.1093/rapstu/raaa018) · [MD](https://willmullins.net/papers/Beliefs_COVID_SSRN.md) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3621067)
 
 > We use party-identifying language – like "Liberal Media" and "MAGA" – to identify Republican users on the investor social platform StockTwits. Using a difference-in-difference design, we find that the beliefs of partisan Republicans about equities remain relatively unfazed during the COVID-19 pandemic, while other users become considerably more pessimistic. In cross-sectional tests, we find Republicans become relatively more optimistic about stocks that suffered the most from COVID-19, but more pessimistic about Chinese stocks. Finally, stocks with the greatest partisan disagreement on StockTwits have significantly more trading in the broader market, explaining 28% of the increase in stock turnover during the pandemic.
 
@@ -165,7 +165,7 @@ With Antoinette Schoar.
 ### Credit Guarantees and New Bank Relationships
 
 With Patricio Toro.
-[Paper](https://drive.google.com/file/d/1AfOQ4Y6hqRntO89UCyIX_d1PHJg_mxfK/view)
+[Paper](https://willmullins.net/papers/Credit_guarantees.pdf)
 
 > Government credit guarantees for bank loans direct vast volumes of credit and are the main policy tool used to improve firms' access to credit. This paper examines Chile's credit guarantee scheme, which is similar to that of many OECD countries. Using a regression discontinuity design around the eligibility cutoff we find that guarantees more than double firms' borrowing without detectable increases in default rates. We also show that banks use guarantees to build new borrower relationships, an important and poorly understood process. The scheme also has an amplification effect: firms increase borrowing from other banks following a guarantee. Finally, we show that firms use the credit increase to significantly scale up their sales and employment. The fact that guarantees are not a common pool resource in this policy design is critical to understanding these results.
 
