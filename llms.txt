@@ -24,7 +24,7 @@ CV: https://drive.google.com/file/d/1VK5cnI-iITBgYWflyEq7GVO_EskBGduT/view
 
 - [Market Signals from Social Media](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187350): With Tony Cookson, Runjing Lu, and Marina Niessner. Builds daily market-wide sentiment and attention indexes from millions of investor social-media posts. Sentiment extrapolates from past returns and reverses; attention predicts continuation of negative returns. The two indexes spread through different channels and have distinct effects on aggregate trading.
 
-- [Immigration and Credit in America](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062): With Tony Cookson and Benedict Guttman-Kenney. Studies how immigrants assimilate into U.S. consumer credit markets. Immigrants are positively selected on creditworthiness (credit scores 27 points above non-immigrants by age 30) but persistently less likely to hold auto loans or mortgages, with gaps lasting over a decade after arrival.
+- [Immigration and Credit in the United States](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062): With Tony Cookson and Benedict Guttman-Kenney. Studies immigrant assimilation into U.S. consumer credit markets, identifying immigrants in credit-bureau data from the timing of Social Security Number assignment. Immigrants are positively selected (credit scores roughly 25 points above non-immigrants' throughout their thirties) but by age 37 are 16 and 9 percentage points less likely to have had an auto loan and a mortgage. Arriving one year later in life lowers auto loan and mortgage use for over a decade, consistent with history dependence in credit access.
 
 ## Publications
 

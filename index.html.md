@@ -53,12 +53,12 @@ With Tony Cookson, Runjing Lu, and Marina Niessner.
 
 > This paper develops daily market-wide sentiment and attention indexes derived from millions of posts across major investor social media platforms. We find that sentiment extrapolates from past market-wide returns and exhibits a strong reversal. In contrast, attention predicts negative returns as a continuation of previous trends. The two indexes have distinct predictions for aggregate trading: abnormal trading rises when sentiment is low and attention is high. To identify the drivers of attention and sentiment, we use a shock to data sharing networks: We find sentiment spreads through real firm connections while attention does not. Moreover, attention rises after abnormally high trading, while sentiment rises after abnormally high returns. This extrapolative return pattern is asymmetric, primarily driven by negative market jumps. These findings provide new evidence on the daily market dynamics of sentiment and attention.
 
-### Immigration and Credit in America
+### Immigration and Credit in the United States
 
 With Tony Cookson and Benedict Guttman-Kenney.
-[Paper](https://drive.google.com/file/d/1yr-qm1zBX_s_q6u2dxtpHkFYmXmEMWql/view) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062)
+[Paper](https://drive.google.com/file/d/1FU4rDUXYCrlYsjcPN7EZ0U-uEKIP6NiY/view?usp=sharing) · [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5187062)
 
-> We study the assimilation of immigrants into U.S. consumer credit markets. Although immigrants arrive without a U.S. credit history, we find that they are positively selected: immigrants' average credit scores at age thirty are 27 points higher than non-immigrants of the same age and 5-digit ZIP, and this gap widens with age. Despite greater creditworthiness, immigrants are less likely than non-immigrants to have ever had an auto loan or a mortgage by age 37, the end of our sample window. We compare credit access of same-age immigrants arriving one year apart, finding persistent differences in credit access lasting over a decade after immigration. Our results point to the importance of time in the U.S. for accessing credit.
+> We study immigrant assimilation into U.S. consumer credit markets, identifying individual immigrants in credit reporting data from the timing of Social Security Number assignment. Immigrants arrive without U.S. credit histories yet are positively selected: credit scores are approximately 25 points higher than non-immigrants' throughout their thirties. Despite greater creditworthiness, by age 37, immigrants are 16 and 9 percentage points less likely to have had an auto loan and a mortgage, respectively. Same-age immigrants arriving one year later-in-life have lower auto loan and mortgage use for over a decade. These patterns suggest history dependence: time in the U.S. shapes credit access.
 
 ## Publications
 
